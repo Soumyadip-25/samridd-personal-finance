@@ -41,17 +41,17 @@ export function AppShell() {
   ];
 
   return (
-    <div className="min-h-screen flex bg-[#FAF5EE] text-[#100C0B]">
-      {/* Desktop Sidebar — Deep Burgundy Background with Cream Logo & Icons */}
-      <aside className="hidden md:flex flex-col w-64 bg-[#541922] text-[#E8DCC6] min-h-screen border-r border-[#3E0F16] shadow-xl select-none shrink-0 justify-between">
+    <div className="min-h-screen flex bg-mocha-surface text-espresso">
+      {/* Desktop Sidebar — Deep Burgundy (#722F37) with Mocha Cream (#E8DCC6) and Cosmic Latte (#B7A89A) */}
+      <aside className="hidden md:flex flex-col w-64 bg-[#722F37] text-[#E8DCC6] min-h-screen border-r border-[#B7A89A]/30 shadow-xl select-none shrink-0 justify-between">
         <div>
-          {/* Top Header: Cream Lotus Logo & SAMRIDD Title */}
+          {/* Top Header: Cream Lotus Logo & SAMRIDD Title in Mocha Cream (#E8DCC6) */}
           <div className="pt-8 pb-2">
             <SamriddLogoCream size="md" />
           </div>
 
-          {/* Delicate Cream Divider Line below Logo */}
-          <div className="w-4/5 mx-auto h-[1px] bg-[#E8DCC6]/20 my-5" />
+          {/* Delicate Divider Line in Cosmic Latte (#B7A89A) */}
+          <div className="w-4/5 mx-auto h-[1px] bg-[#B7A89A]/40 my-5" />
 
           {/* Primary Navigation Tabs */}
           <nav className="px-3.5 space-y-1.5 overflow-y-auto">
@@ -79,14 +79,14 @@ export function AppShell() {
 
         {/* Bottom Section: Divider & Profiles Switcher */}
         <div className="px-3.5 pb-6">
-          {/* Delicate Cream Divider Line above Profiles */}
-          <div className="w-4/5 mx-auto h-[1px] bg-[#E8DCC6]/20 mb-4" />
+          {/* Delicate Divider Line in Cosmic Latte (#B7A89A) */}
+          <div className="w-4/5 mx-auto h-[1px] bg-[#B7A89A]/40 mb-4" />
 
           <div className="relative">
             {/* Profiles Dropdown Popup Menu */}
             {profileDropdownOpen && (
-              <div className="absolute bottom-full left-0 right-0 mb-3 bg-[#42121A] border border-[#E8DCC6]/25 rounded-2xl p-3 shadow-2xl space-y-2 z-50 text-xs font-sans">
-                <div className="px-2 py-1 text-[10px] font-cinzel font-bold text-[#E8DCC6]/70 uppercase tracking-wider">
+              <div className="absolute bottom-full left-0 right-0 mb-3 bg-[#722F37] border-2 border-[#B7A89A] rounded-2xl p-3 shadow-2xl space-y-2 z-50 text-xs font-sans">
+                <div className="px-2 py-1 text-[10px] font-cinzel font-bold text-[#E8DCC6] uppercase tracking-wider">
                   Switch Workspace
                 </div>
 
@@ -121,7 +121,7 @@ export function AppShell() {
                   Family Household
                 </button>
 
-                <div className="border-t border-[#E8DCC6]/15 pt-2 space-y-1">
+                <div className="border-t border-[#B7A89A]/30 pt-2 space-y-1">
                   <button
                     onClick={() => {
                       navigate(`/settings/profiles`);
@@ -146,7 +146,7 @@ export function AppShell() {
 
                   <button
                     onClick={() => navigate('/login')}
-                    className="w-full flex items-center gap-2 px-3 py-1.5 rounded-lg text-rose-300 hover:bg-white/5 font-medium transition-colors"
+                    className="w-full flex items-center gap-2 px-3 py-1.5 rounded-lg text-[#E8DCC6] hover:bg-white/5 font-medium transition-colors"
                   >
                     <LogOut className="w-3.5 h-3.5" />
                     <span>Sign Out</span>
@@ -162,8 +162,8 @@ export function AppShell() {
               aria-label="Profile menu"
             >
               <div className="flex items-center gap-3">
-                {/* Cream Circular User Avatar matching Image 1 */}
-                <div className="w-9 h-9 rounded-full bg-[#E8DCC6] flex items-center justify-center text-[#541922] shadow-xs">
+                {/* Circular User Avatar in Mocha Cream (#E8DCC6) & Deep Burgundy (#722F37) */}
+                <div className="w-9 h-9 rounded-full bg-[#E8DCC6] flex items-center justify-center text-[#722F37] shadow-xs">
                   <User className="w-5 h-5 fill-current" />
                 </div>
                 <span className="font-medium text-[15px] text-[#E8DCC6] group-hover:text-white transition-colors">
@@ -182,8 +182,8 @@ export function AppShell() {
 
       {/* Main Layout Area */}
       <div className="flex-1 flex flex-col min-w-0">
-        {/* Mobile Top Header (Burgundy & Cream) */}
-        <header className="md:hidden flex items-center justify-between p-4 bg-[#541922] text-[#E8DCC6] border-b border-[#3E0F16]">
+        {/* Mobile Top Header (Deep Burgundy #722F37 & Mocha Cream #E8DCC6) */}
+        <header className="md:hidden flex items-center justify-between p-4 bg-[#722F37] text-[#E8DCC6] border-b border-[#B7A89A]/30">
           <div className="flex items-center gap-2.5">
             <SamriddLogoCream size="sm" />
           </div>
@@ -199,7 +199,7 @@ export function AppShell() {
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-[#541922] border-b border-[#E8DCC6]/20 p-4 space-y-1.5 shadow-xl">
+          <div className="md:hidden bg-[#722F37] border-b border-[#B7A89A]/30 p-4 space-y-1.5 shadow-xl">
             {navItems.map((item) => {
               const Icon = item.icon;
               return (
@@ -228,8 +228,8 @@ export function AppShell() {
           <Outlet />
         </main>
 
-        {/* Mobile Bottom Navigation Bar (5 Primary Actions) */}
-        <div className="md:hidden fixed bottom-0 left-0 right-0 border-t border-[#E8DCC6]/20 bg-[#541922]/98 backdrop-blur-md z-40 flex items-center justify-around py-2">
+        {/* Mobile Bottom Navigation Bar (Deep Burgundy #722F37 & Mocha Cream #E8DCC6) */}
+        <div className="md:hidden fixed bottom-0 left-0 right-0 border-t border-[#B7A89A]/30 bg-[#722F37]/98 backdrop-blur-md z-40 flex items-center justify-around py-2">
           {navItems.slice(0, 4).map((item) => {
             const Icon = item.icon;
             return (

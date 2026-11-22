@@ -30,7 +30,7 @@ export default function PrivacyPage() {
         </div>
 
         {/* Main Document Card */}
-        <div className="rounded-3xl border-2 border-[#C2B09D] bg-[#FCF8F2]/95 p-8 sm:p-14 shadow-2xl backdrop-blur-xs">
+        <div className="rounded-3xl border-2 border-[#B7A89A] bg-[#FCF8F2]/95 p-8 sm:p-14 shadow-2xl backdrop-blur-xs">
           {/* Header */}
           <div className="border-b-2 border-latte/40 pb-8 mb-8">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-burgundy/10 border border-burgundy/25 text-burgundy font-cinzel font-bold text-xs uppercase tracking-[0.24em] mb-3">
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
           </div>
 
           {/* Plain-English Executive Summary Callout */}
-          <div className="mb-10 p-6 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D] space-y-3">
+          <div className="mb-10 p-6 rounded-2xl bg-[#F5EDE0] border border-[#B7A89A] space-y-3">
             <h3 className="font-serif font-bold text-base text-burgundy flex items-center gap-2">
               <Lock className="w-4 h-4 text-burgundy" /> The SAMRIDD Sovereign Privacy Commitment
             </h3>
@@ -202,7 +202,7 @@ export default function PrivacyPage() {
             </section>
 
             {/* Section 8: Grievance Officer */}
-            <section className="p-6 rounded-2xl bg-[#F6EFE3] border-2 border-burgundy/30">
+            <section className="p-6 rounded-2xl bg-[#F5EDE0] border-2 border-burgundy/30">
               <h2 className="text-lg sm:text-xl font-serif font-bold text-burgundy mb-2 flex items-center gap-2">
                 <Mail className="w-5 h-5 text-burgundy" /> 8. Statutory Grievance Redressal &amp; DPO
               </h2>

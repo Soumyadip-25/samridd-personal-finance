@@ -27,38 +27,44 @@ export default function LandingPage() {
           {/* Right Column: Take Control of Your Finances + Description + Quote */}
           <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
             {/* Main Headline with high-contrast obsidian black & deep burgundy */}
-            <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] font-serif font-black tracking-tight leading-[1.10]">
+            <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] font-serif font-black tracking-tight leading-[1.12]">
               <span className="text-[#100C0B] block">Take Control of</span>
               <span className="text-[#100C0B]">Your </span>
-              <span className="text-burgundy italic font-serif font-black">Finances</span>
+              <span className="relative inline-block text-burgundy italic font-serif font-black">
+                Finances
+                {/* Wavy curved underline only under "Finances" in Cosmic Latte / Mocha */}
+                <svg
+                  className="absolute -bottom-1.5 sm:-bottom-2.5 left-0 w-full h-3 sm:h-4 text-[#B7A89A] pointer-events-none"
+                  viewBox="0 0 160 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M 3 11 C 45 3, 115 3, 157 11"
+                    stroke="currentColor"
+                    strokeWidth="3.5"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
             </h1>
 
-            {/* Delicate curved arc underline under "Your Finances" */}
-            <svg
-              className="w-48 sm:w-64 h-3 sm:h-4 text-burgundy mt-1"
-              viewBox="0 0 240 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M 4 12 C 70 3, 170 3, 236 12"
-                stroke="currentColor"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-            </svg>
+            {/* Subtitle / Description & Quote Container */}
+            <div className="mt-6 max-w-xl w-full">
+              <p className="text-base sm:text-lg lg:text-xl font-serif text-[#100C0B] leading-relaxed font-medium">
+                Track your income, manage expenses, master your budgets,<br className="hidden sm:inline" />
+                plan life&apos;s biggest moments, and achieve your financial goals.
+              </p>
 
-            {/* Subtitle / Description in rich, crisp dark text */}
-            <p className="mt-6 text-base sm:text-lg lg:text-xl font-serif text-[#100C0B] max-w-xl leading-relaxed font-medium">
-              Track your income, manage expenses, master your budgets,<br className="hidden sm:inline" />
-              plan life&apos;s biggest moments, and achieve your financial goals.
-            </p>
-
-            {/* Quote Line: ~ all in one place ~ */}
-            <p className="mt-4 text-xl sm:text-2xl lg:text-[1.75rem] font-serif italic text-burgundy font-bold tracking-wide">
-              ~ all in one place ~
-            </p>
+              {/* Quote Line on the right side of the writing */}
+              <div className="flex justify-end mt-3">
+                <p className="text-xl sm:text-2xl lg:text-[1.75rem] font-serif italic text-burgundy font-bold tracking-wide text-right">
+                  ~ all in one place ~
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -108,7 +114,7 @@ export default function LandingPage() {
           {/* Feature Bento Grid (7 Core Pillars Redesigned with High Glamour) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
             {/* 1. Moments — Occasion & Milestone Planning (Span 7 cols) */}
-            <div className="lg:col-span-7 p-7 sm:p-9 rounded-3xl border-2 border-[#C2B09D] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+            <div className="lg:col-span-7 p-7 sm:p-9 rounded-3xl border-2 border-[#B7A89A] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 rounded-2xl bg-mocha text-burgundy flex items-center justify-center ring-2 ring-burgundy/20 shadow-xs">
@@ -127,7 +133,7 @@ export default function LandingPage() {
               </div>
 
               {/* Glamorous Interactive Preview: Sister's Wedding Budget */}
-              <div className="mt-6 p-4 sm:p-5 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]/60 space-y-3.5 shadow-inner">
+              <div className="mt-6 p-4 sm:p-5 rounded-2xl bg-[#F5EDE0] border border-[#B7A89A]/60 space-y-3.5 shadow-inner">
                 <div className="flex items-center justify-between text-xs sm:text-sm">
                   <span className="font-serif font-bold text-burgundy flex items-center gap-2">
                     <Sparkles className="w-4 h-4 text-burgundy" /> Sister&apos;s Wedding &bull; Winter 2026
@@ -155,7 +161,7 @@ export default function LandingPage() {
             </div>
 
             {/* 2. Independent Financial Profiles (Span 5 cols) */}
-            <div className="lg:col-span-5 p-7 sm:p-9 rounded-3xl border-2 border-[#C2B09D] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+            <div className="lg:col-span-5 p-7 sm:p-9 rounded-3xl border-2 border-[#B7A89A] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-2xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-2 ring-burgundy/20 shadow-xs">
                   <Layers className="w-6 h-6" />
@@ -169,16 +175,16 @@ export default function LandingPage() {
               </div>
 
               {/* Glamorous Profile Switcher Preview */}
-              <div className="mt-6 p-4 sm:p-5 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]/60 flex flex-col gap-3 shadow-inner">
+              <div className="mt-6 p-4 sm:p-5 rounded-2xl bg-[#F5EDE0] border border-[#B7A89A]/60 flex flex-col gap-3 shadow-inner">
                 <div className="text-[11px] font-cinzel uppercase tracking-wider text-latte-dark font-bold">Sovereign Profile Workspaces</div>
                 <div className="flex flex-wrap gap-2">
                   <span className="px-3.5 py-1.5 rounded-xl bg-burgundy text-[#E8DCC6] font-serif text-xs font-bold shadow-sm flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-income animate-pulse" /> Personal Finance
                   </span>
-                  <span className="px-3.5 py-1.5 rounded-xl bg-[#FAF4EA] border border-[#C2B09D] text-[#1E1715] font-serif text-xs font-semibold">
+                  <span className="px-3.5 py-1.5 rounded-xl bg-[#FAF4EA] border border-[#B7A89A] text-[#1E1715] font-serif text-xs font-semibold">
                     Freelance Studio
                   </span>
-                  <span className="px-3.5 py-1.5 rounded-xl bg-[#FAF4EA] border border-[#C2B09D] text-[#1E1715] font-serif text-xs font-semibold">
+                  <span className="px-3.5 py-1.5 rounded-xl bg-[#FAF4EA] border border-[#B7A89A] text-[#1E1715] font-serif text-xs font-semibold">
                     Family Trust
                   </span>
                 </div>
@@ -189,7 +195,7 @@ export default function LandingPage() {
             </div>
 
             {/* 3. Income Management (Span 4 cols) */}
-            <div className="lg:col-span-4 p-7 sm:p-8 rounded-3xl border-2 border-[#C2B09D] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+            <div className="lg:col-span-4 p-7 sm:p-8 rounded-3xl border-2 border-[#B7A89A] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
               <div>
                 <div className="w-11 h-11 rounded-2xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-2 ring-burgundy/20 shadow-xs">
                   <Wallet className="w-5 h-5" />
@@ -203,7 +209,7 @@ export default function LandingPage() {
               </div>
 
               {/* Inflow Snapshot */}
-              <div className="mt-5 p-4 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]/60 space-y-2.5 text-xs shadow-inner">
+              <div className="mt-5 p-4 rounded-2xl bg-[#F5EDE0] border border-[#B7A89A]/60 space-y-2.5 text-xs shadow-inner">
                 <div className="flex items-center justify-between font-mono bg-[#FAF4EA] p-2 rounded-xl border border-latte/30">
                   <span className="text-[#100C0B] font-semibold">Consulting Retainer &bull; UPI</span>
                   <span className="text-income font-extrabold text-sm">+&#8377;45,000</span>
@@ -220,7 +226,7 @@ export default function LandingPage() {
             </div>
 
             {/* 4. Single Unified Ledger (Span 4 cols) */}
-            <div className="lg:col-span-4 p-7 sm:p-8 rounded-3xl border-2 border-[#C2B09D] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+            <div className="lg:col-span-4 p-7 sm:p-8 rounded-3xl border-2 border-[#B7A89A] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
               <div>
                 <div className="w-11 h-11 rounded-2xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-2 ring-burgundy/20 shadow-xs">
                   <Receipt className="w-5 h-5" />
@@ -234,7 +240,7 @@ export default function LandingPage() {
               </div>
 
               {/* Central Ledger Snapshot */}
-              <div className="mt-5 p-4 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]/60 space-y-2.5 text-xs shadow-inner">
+              <div className="mt-5 p-4 rounded-2xl bg-[#F5EDE0] border border-[#B7A89A]/60 space-y-2.5 text-xs shadow-inner">
                 <div className="flex items-center justify-between text-xs text-latte-dark border-b border-latte/40 pb-1.5 font-bold">
                   <span>Single Ledger Feed</span>
                   <span className="font-mono text-income font-extrabold">Net: +&#8377;38,250.00</span>
@@ -251,7 +257,7 @@ export default function LandingPage() {
             </div>
 
             {/* 5. Budget Planning (Span 4 cols) */}
-            <div className="lg:col-span-4 p-7 sm:p-8 rounded-3xl border-2 border-[#C2B09D] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+            <div className="lg:col-span-4 p-7 sm:p-8 rounded-3xl border-2 border-[#B7A89A] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
               <div>
                 <div className="w-11 h-11 rounded-2xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-2 ring-burgundy/20 shadow-xs">
                   <Sliders className="w-5 h-5" />
@@ -265,7 +271,7 @@ export default function LandingPage() {
               </div>
 
               {/* Budget Pacing Snapshot */}
-              <div className="mt-5 p-4 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]/60 space-y-3 text-xs shadow-inner">
+              <div className="mt-5 p-4 rounded-2xl bg-[#F5EDE0] border border-[#B7A89A]/60 space-y-3 text-xs shadow-inner">
                 <div className="flex justify-between font-serif">
                   <span className="text-burgundy font-bold">Dining &amp; Socializing</span>
                   <span className="font-mono text-[#100C0B] font-bold">&#8377;8,400 / &#8377;10,000</span>
@@ -280,7 +286,7 @@ export default function LandingPage() {
             </div>
 
             {/* 6. Categories — Organise Your Money Your Way (Span 6 cols) */}
-            <div className="lg:col-span-6 p-7 sm:p-8 rounded-3xl border-2 border-[#C2B09D] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+            <div className="lg:col-span-6 p-7 sm:p-8 rounded-3xl border-2 border-[#B7A89A] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
               <div>
                 <div className="w-11 h-11 rounded-2xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-2 ring-burgundy/20 shadow-xs">
                   <Tags className="w-5 h-5" />
@@ -294,7 +300,7 @@ export default function LandingPage() {
               </div>
 
               {/* Category Badges Preview */}
-              <div className="mt-6 p-4 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]/60 shadow-inner">
+              <div className="mt-6 p-4 rounded-2xl bg-[#F5EDE0] border border-[#B7A89A]/60 shadow-inner">
                 <div className="flex flex-wrap gap-2 text-xs">
                   <span className="px-3 py-1.5 rounded-xl bg-burgundy/15 border border-burgundy/40 text-burgundy font-serif font-bold shadow-xs">
                     &#128591; Puja &amp; Rituals
@@ -316,7 +322,7 @@ export default function LandingPage() {
             </div>
 
             {/* 7. Financial Reports — Turn Records into Clarity (Span 6 cols) */}
-            <div className="lg:col-span-6 p-7 sm:p-8 rounded-3xl border-2 border-[#C2B09D] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+            <div className="lg:col-span-6 p-7 sm:p-8 rounded-3xl border-2 border-[#B7A89A] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
               <div>
                 <div className="w-11 h-11 rounded-2xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-2 ring-burgundy/20 shadow-xs">
                   <BarChart3 className="w-5 h-5" />
@@ -330,7 +336,7 @@ export default function LandingPage() {
               </div>
 
               {/* Reports Preview */}
-              <div className="mt-6 p-4 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]/60 space-y-2.5 text-xs shadow-inner">
+              <div className="mt-6 p-4 rounded-2xl bg-[#F5EDE0] border border-[#B7A89A]/60 space-y-2.5 text-xs shadow-inner">
                 <div className="flex items-center justify-between">
                   <span className="font-serif font-bold text-burgundy text-sm">April &ndash; March Indian FY Preset</span>
                   <span className="px-3 py-1 rounded-full bg-income/20 text-income font-mono text-xs font-black border border-income/30">
@@ -380,7 +386,7 @@ export default function LandingPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-start p-8 rounded-3xl border-2 border-[#C2B09D] bg-[#FCF8F2] shadow-sm hover:shadow-md transition-all">
+            <div className="flex flex-col items-start p-8 rounded-3xl border-2 border-[#B7A89A] bg-[#FCF8F2] shadow-sm hover:shadow-md transition-all">
               <span className="font-cinzel font-black text-4xl text-burgundy/40 mb-3">01</span>
               <h3 className="font-serif font-bold text-xl text-burgundy mb-2">Create Your Profile</h3>
               <p className="text-sm text-[#1E1715] leading-relaxed font-medium">
@@ -388,7 +394,7 @@ export default function LandingPage() {
               </p>
             </div>
 
-            <div className="flex flex-col items-start p-8 rounded-3xl border-2 border-[#C2B09D] bg-[#FCF8F2] shadow-sm hover:shadow-md transition-all">
+            <div className="flex flex-col items-start p-8 rounded-3xl border-2 border-[#B7A89A] bg-[#FCF8F2] shadow-sm hover:shadow-md transition-all">
               <span className="font-cinzel font-black text-4xl text-burgundy/40 mb-3">02</span>
               <h3 className="font-serif font-bold text-xl text-burgundy mb-2">Record Transactions</h3>
               <p className="text-sm text-[#1E1715] leading-relaxed font-medium">
@@ -396,7 +402,7 @@ export default function LandingPage() {
               </p>
             </div>
 
-            <div className="flex flex-col items-start p-8 rounded-3xl border-2 border-[#C2B09D] bg-[#FCF8F2] shadow-sm hover:shadow-md transition-all">
+            <div className="flex flex-col items-start p-8 rounded-3xl border-2 border-[#B7A89A] bg-[#FCF8F2] shadow-sm hover:shadow-md transition-all">
               <span className="font-cinzel font-black text-4xl text-burgundy/40 mb-3">03</span>
               <h3 className="font-serif font-bold text-xl text-burgundy mb-2">Plan &amp; Master Goals</h3>
               <p className="text-sm text-[#1E1715] leading-relaxed font-medium">

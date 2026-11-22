@@ -30,7 +30,7 @@ export default function TermsPage() {
         </div>
 
         {/* Main Document Card */}
-        <div className="rounded-3xl border-2 border-[#C2B09D] bg-[#FCF8F2]/95 p-8 sm:p-14 shadow-2xl backdrop-blur-xs">
+        <div className="rounded-3xl border-2 border-[#B7A89A] bg-[#FCF8F2]/95 p-8 sm:p-14 shadow-2xl backdrop-blur-xs">
           {/* Header */}
           <div className="border-b-2 border-latte/40 pb-8 mb-8">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-burgundy/10 border border-burgundy/25 text-burgundy font-cinzel font-bold text-xs uppercase tracking-[0.24em] mb-3">
@@ -46,7 +46,7 @@ export default function TermsPage() {
           </div>
 
           {/* Critical Advisory & Regulatory Disclaimer Callout */}
-          <div className="mb-10 p-6 rounded-2xl bg-[#F6EFE3] border-2 border-burgundy/30 space-y-3">
+          <div className="mb-10 p-6 rounded-2xl bg-[#F5EDE0] border-2 border-burgundy/30 space-y-3">
             <h3 className="font-serif font-bold text-base text-burgundy flex items-center gap-2">
               <AlertTriangle className="w-4 h-4 text-burgundy" /> Important Regulatory &amp; Financial Disclaimer
             </h3>
@@ -211,7 +211,7 @@ export default function TermsPage() {
             </section>
 
             {/* Section 9 */}
-            <section className="p-6 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]">
+            <section className="p-6 rounded-2xl bg-[#F5EDE0] border border-[#B7A89A]">
               <h2 className="text-lg sm:text-xl font-serif font-bold text-burgundy mb-2 flex items-center gap-2">
                 9. Modifications to Terms &amp; Inquiries
               </h2>
