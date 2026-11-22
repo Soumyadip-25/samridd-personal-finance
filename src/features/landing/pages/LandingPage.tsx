@@ -17,114 +17,114 @@ export default function LandingPage() {
     <div className="relative w-full">
       {/* 1. Hero Section — Full Viewport Screen (§1.4) */}
       <section className="relative min-h-[calc(100vh-5rem)] lg:h-[calc(100vh-5rem)] flex flex-col justify-between overflow-hidden">
-        {/* Main Content Area */}
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-5 sm:pt-8 lg:pt-9 pb-0 w-full flex-1 flex flex-col justify-between relative z-10">
-          {/* Upper Hero Content: Balanced vertically */}
-          <div className="my-auto flex flex-col items-center w-full">
-            {/* Two-Column Grid: Left = Logo & Plan Track Grow, Right = Headings & Description */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center w-full">
-              {/* Left Column: SAMRIDD Logo + PLAN • TRACK • GROW in bold burgundy */}
-              <div className="lg:col-span-5 flex flex-col items-center text-center">
-                <SamriddLogo size="lg" align="center" />
-              </div>
-
-              {/* Right Column: Take Control of Your Finances + Description + Quote */}
-              <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
-                {/* Main Headline with high-contrast obsidian black & deep burgundy */}
-                <h1 className="text-4xl sm:text-5xl lg:text-[4rem] font-serif font-black tracking-tight leading-[1.12]">
-                  <span className="text-[#100C0B] block">Take Control of</span>
-                  <span className="text-[#100C0B]">Your </span>
-                  <span className="relative inline-block text-burgundy italic font-serif font-black">
-                    Finances
-                    {/* Wavy curved underline only under "Finances" in Cosmic Latte / Mocha */}
-                    <svg
-                      className="absolute -bottom-1.5 sm:-bottom-2.5 left-0 w-full h-3 sm:h-4 text-[#B7A89A] pointer-events-none"
-                      viewBox="0 0 160 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      preserveAspectRatio="none"
-                    >
-                      <path
-                        d="M 3 11 C 45 3, 115 3, 157 11"
-                        stroke="currentColor"
-                        strokeWidth="3.5"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </span>
-                </h1>
-
-                {/* Subtitle / Description & Quote Container */}
-                <div className="mt-4 sm:mt-5 max-w-xl w-full">
-                  <p className="text-base sm:text-lg lg:text-xl font-serif text-[#100C0B] leading-relaxed font-medium">
-                    Track your income, manage expenses, master your budgets,<br className="hidden sm:inline" />
-                    plan life&apos;s biggest moments, and achieve your financial goals.
-                  </p>
-
-                  {/* Quote Line on the right side of the writing */}
-                  <div className="flex justify-end mt-2">
-                    <p className="text-xl sm:text-2xl lg:text-[1.75rem] font-serif italic text-burgundy font-bold tracking-wide text-right">
-                      ~ all in one place
-                    </p>
-                  </div>
-                </div>
-              </div>
+        {/* Main Content Area: Centered vertically */}
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-4 sm:pt-6 lg:pt-8 pb-2 w-full flex-1 flex flex-col justify-center relative z-10">
+          {/* Two-Column Grid: Left = Logo & Plan Track Grow, Right = Headings & Description */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center w-full">
+            {/* Left Column: SAMRIDD Logo + PLAN • TRACK • GROW in bold burgundy */}
+            <div className="lg:col-span-5 flex flex-col items-center text-center">
+              <SamriddLogo size="lg" align="center" />
             </div>
 
-            {/* Centrally Aligned Down the Contents: Refined Sleek Get Started Button */}
-            <div className="mt-5 sm:mt-6 flex flex-col items-center justify-center w-full gap-3 sm:gap-4">
-              <Link
-                to="/signup"
-                className="inline-flex items-center gap-2.5 px-8 py-2.5 sm:px-10 sm:py-3 rounded-full bg-burgundy text-[#E8DCC6] font-serif font-bold text-base sm:text-lg shadow-xl hover:bg-burgundy-hover hover:text-[#FAF5EE] hover:shadow-burgundy/30 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 group ring-1 ring-burgundy/30"
-              >
-                <span>Get Started</span>
-                <span className="text-xl leading-none transition-transform group-hover:translate-x-1">&rarr;</span>
-              </Link>
+            {/* Right Column: Take Control of Your Finances + Description + Quote */}
+            <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
+              {/* Main Headline with high-contrast obsidian black & deep burgundy */}
+              <h1 className="text-4xl sm:text-5xl lg:text-[4rem] font-serif font-black tracking-tight leading-[1.12]">
+                <span className="text-[#100C0B] block">Take Control of</span>
+                <span className="text-[#100C0B]">Your </span>
+                <span className="relative inline-block text-burgundy italic font-serif font-black">
+                  Finances
+                  {/* Wavy curved underline only under "Finances" in Cosmic Latte / Mocha */}
+                  <svg
+                    className="absolute -bottom-1.5 sm:-bottom-2.5 left-0 w-full h-3 sm:h-4 text-[#B7A89A] pointer-events-none"
+                    viewBox="0 0 160 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M 3 11 C 45 3, 115 3, 157 11"
+                      stroke="currentColor"
+                      strokeWidth="3.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+              </h1>
 
-              {/* Three Feature Badges matching user reference (media_1795377857927_81768710.png) */}
-              <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 lg:gap-8 pt-1">
-                {/* 1. Secure & Private */}
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
-                    <ShieldCheck className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
-                  </div>
-                  <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
-                    Secure &amp; Private
-                  </span>
-                </div>
+              {/* Subtitle / Description & Quote Container */}
+              <div className="mt-4 sm:mt-5 max-w-xl w-full">
+                <p className="text-base sm:text-lg lg:text-xl font-serif text-[#100C0B] leading-relaxed font-medium">
+                  Track your income, manage expenses, master your budgets,<br className="hidden sm:inline" />
+                  plan life&apos;s biggest moments, and achieve your financial goals.
+                </p>
 
-                {/* Divider */}
-                <div className="hidden sm:block h-6 w-[1.5px] bg-[#B7A89A]/60" />
-
-                {/* 2. Multiple Profiles */}
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
-                    <Layers className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
-                  </div>
-                  <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
-                    Multiple Profiles
-                  </span>
-                </div>
-
-                {/* Divider */}
-                <div className="hidden sm:block h-6 w-[1.5px] bg-[#B7A89A]/60" />
-
-                {/* 3. Insightful Reports */}
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
-                    <BarChart3 className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
-                  </div>
-                  <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
-                    Insightful Reports
-                  </span>
+                {/* Quote Line on the right side of the writing */}
+                <div className="flex justify-end mt-2">
+                  <p className="text-xl sm:text-2xl lg:text-[1.75rem] font-serif italic text-burgundy font-bold tracking-wide text-right">
+                    ~ all in one place
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Bottom Tagline Divider shifted to the bottom of the page right above the waves */}
-          <div className="mt-auto mb-2 sm:mb-2.5 flex items-center justify-center gap-3 sm:gap-4 text-burgundy font-serif italic font-semibold text-sm sm:text-base relative z-20">
+          {/* Centrally Aligned Down the Contents: Refined Sleek Get Started Button */}
+          <div className="mt-5 sm:mt-6 flex flex-col items-center justify-center w-full gap-3 sm:gap-4">
+            <Link
+              to="/signup"
+              className="inline-flex items-center gap-2.5 px-8 py-2.5 sm:px-10 sm:py-3 rounded-full bg-burgundy text-[#E8DCC6] font-serif font-bold text-base sm:text-lg shadow-xl hover:bg-burgundy-hover hover:text-[#FAF5EE] hover:shadow-burgundy/30 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 group ring-1 ring-burgundy/30"
+            >
+              <span>Get Started</span>
+              <span className="text-xl leading-none transition-transform group-hover:translate-x-1">&rarr;</span>
+            </Link>
+
+            {/* Three Feature Badges matching user reference (media_1795377857927_81768710.png) */}
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 lg:gap-8 pt-1">
+              {/* 1. Secure & Private */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
+                  <ShieldCheck className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
+                </div>
+                <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
+                  Secure &amp; Private
+                </span>
+              </div>
+
+              {/* Divider */}
+              <div className="hidden sm:block h-6 w-[1.5px] bg-[#B7A89A]/60" />
+
+              {/* 2. Multiple Profiles */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
+                  <Layers className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
+                </div>
+                <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
+                  Multiple Profiles
+                </span>
+              </div>
+
+              {/* Divider */}
+              <div className="hidden sm:block h-6 w-[1.5px] bg-[#B7A89A]/60" />
+
+              {/* 3. Insightful Reports */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
+                  <BarChart3 className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
+                </div>
+                <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
+                  Insightful Reports
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Layered Flowing Bottom Waves with refined, sleek thickness */}
+        <div className="relative w-full h-[85px] sm:h-[110px] lg:h-[130px] pointer-events-none select-none z-10 -mb-px">
+          {/* Tagline centered and resting in the wave dip */}
+          <div className="absolute top-1.5 sm:top-2 lg:top-2.5 inset-x-0 flex items-center justify-center gap-3 sm:gap-4 text-burgundy font-serif italic font-semibold text-sm sm:text-base pointer-events-auto z-20">
             <span className="w-12 sm:w-28 h-[1.5px] bg-burgundy/60"></span>
             <span className="flex items-center gap-2">
               <span className="text-xs">✦</span>
@@ -133,18 +133,22 @@ export default function LandingPage() {
             </span>
             <span className="w-12 sm:w-28 h-[1.5px] bg-burgundy/60"></span>
           </div>
-        </div>
 
-        {/* Minimal Breadth Flowing Waves anchored at base of Hero section */}
-        <div className="w-full h-[36px] sm:h-[44px] lg:h-[50px] pointer-events-none select-none relative z-10 -mb-px">
           <svg
             className="w-full h-full block"
-            viewBox="0 0 1440 100"
+            viewBox="0 0 1440 220"
             preserveAspectRatio="none"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <defs>
+              <linearGradient id="hero-mocha-grad" x1="0%" y1="0%" x2="100%" y2="60%">
+                <stop offset="0%" stopColor="#F5EDE0" stopOpacity="0.95" />
+                <stop offset="40%" stopColor="#E8DCC6" stopOpacity="0.92" />
+                <stop offset="75%" stopColor="#DFD0B8" stopOpacity="0.95" />
+                <stop offset="100%" stopColor="#E8DCC6" stopOpacity="0.95" />
+              </linearGradient>
+
               <linearGradient id="hero-latte-grad" x1="0%" y1="0%" x2="100%" y2="50%">
                 <stop offset="0%" stopColor="#CDBEAE" />
                 <stop offset="45%" stopColor="#B7A89A" />
@@ -160,18 +164,25 @@ export default function LandingPage() {
               </linearGradient>
             </defs>
 
-            {/* 1. Upper Wave Ribbon: Cosmic Latte (#B7A89A) */}
+            {/* 1. Upper Wave Ribbon: Mocha Cream (#E8DCC6) — Sleek refined thickness */}
             <path
-              d="M 0 45 C 300 58, 530 75, 720 75 C 910 75, 1150 54, 1440 40 L 1440 100 L 0 100 Z"
-              fill="url(#hero-latte-grad)"
-              style={{ filter: 'drop-shadow(0 -3px 8px rgba(114, 47, 55, 0.12))' }}
+              d="M 0 42 C 60 40, 120 35, 180 35 C 400 50, 530 135, 720 135 C 910 135, 1040 45, 1260 30 C 1320 30, 1380 36, 1440 38 L 1440 220 L 0 220 Z"
+              fill="url(#hero-mocha-grad)"
+              style={{ filter: 'drop-shadow(0 -3px 8px rgba(114, 47, 55, 0.08))' }}
             />
 
-            {/* 2. Bottom Foundation Wave: Deep Burgundy (#722F37) */}
+            {/* 2. Middle Wave Ribbon: Cosmic Latte (#B7A89A) — Flowing middle contour */}
             <path
-              d="M 0 68 C 320 78, 520 90, 720 90 C 920 90, 1140 74, 1440 60 L 1440 100 L 0 100 Z"
+              d="M 0 68 C 60 66, 120 60, 180 60 C 400 75, 530 158, 720 158 C 910 158, 1040 69, 1260 54 C 1320 54, 1380 60, 1440 62 L 1440 220 L 0 220 Z"
+              fill="url(#hero-latte-grad)"
+              style={{ filter: 'drop-shadow(0 -4px 10px rgba(114, 47, 55, 0.12))' }}
+            />
+
+            {/* 3. Bottom Foundation Wave: Deep Burgundy (#722F37) — Sleeker refined foundation */}
+            <path
+              d="M 0 98 C 60 96, 120 90, 180 90 C 400 105, 530 182, 720 182 C 910 182, 1040 97, 1260 82 C 1320 82, 1380 88, 1440 90 L 1440 220 L 0 220 Z"
               fill="url(#hero-burgundy-grad)"
-              style={{ filter: 'drop-shadow(0 -4px 10px rgba(78, 20, 27, 0.22))' }}
+              style={{ filter: 'drop-shadow(0 -5px 14px rgba(78, 20, 27, 0.25))' }}
             />
           </svg>
         </div>
