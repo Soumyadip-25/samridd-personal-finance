@@ -71,13 +71,13 @@ export default function LandingPage() {
             <span>Get Started</span>
             <span className="text-2xl leading-none transition-transform group-hover:translate-x-1.5">&rarr;</span>
           </Link>
-          <span className="text-xs font-serif text-espresso-muted/90 flex items-center gap-2">
-            <Lock className="w-3.5 h-3.5 text-income" />
-            <span>Zero Bank Scraping</span>
+          <span className="text-xs sm:text-sm font-serif text-espresso-muted/90 flex flex-wrap items-center justify-center gap-2">
+            <Lock className="w-3.5 h-3.5 text-income shrink-0" />
+            <span>Secure &amp; Private</span>
             <span>&bull;</span>
-            <span>100% DPDP Aligned</span>
+            <span>Multiple Profiles</span>
             <span>&bull;</span>
-            <span>Single Sovereign Ledger</span>
+            <span>Insightful Reports</span>
           </span>
         </div>
 
@@ -420,13 +420,13 @@ export default function LandingPage() {
 
           <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm font-serif font-bold text-burgundy">
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-income" /> Zero Bank Scraping
+              <CheckCircle2 className="w-5 h-5 text-income" /> Secure &amp; Private
             </span>
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-income" /> 100% Indian Data Sovereignty
+              <CheckCircle2 className="w-5 h-5 text-income" /> Multiple Profiles
             </span>
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-income" /> Fully DPDP Act (2023) Aligned
+              <CheckCircle2 className="w-5 h-5 text-income" /> Insightful Reports
             </span>
           </div>
         </div>

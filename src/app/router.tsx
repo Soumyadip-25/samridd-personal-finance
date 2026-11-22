@@ -18,6 +18,8 @@ const ReportsPage = lazy(() => import('@/features/reports/pages/ReportsPage'));
 const MomentsPage = lazy(() => import('@/features/moments/pages/MomentsPage'));
 const SettingsPage = lazy(() => import('@/features/settings/pages/SettingsPage'));
 const AdminOverviewPage = lazy(() => import('@/features/admin/pages/AdminOverviewPage'));
+const TermsPage = lazy(() => import('@/features/legal/pages/TermsPage'));
+const PrivacyPage = lazy(() => import('@/features/legal/pages/PrivacyPage'));
 
 function PageLoader() {
   return (
@@ -35,8 +37,8 @@ export function AppRouter() {
           {/* Public Pre-rendered Routes (§A.2) */}
           <Route element={<PublicLayout />}>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/terms" element={<div className="max-w-4xl mx-auto py-12 px-4"><h1>Terms of Service</h1><p className="mt-4 text-sm text-[var(--foreground-muted)]">DPDP Act (2023) aligned legal terms.</p></div>} />
-            <Route path="/privacy" element={<div className="max-w-4xl mx-auto py-12 px-4"><h1>Privacy Policy</h1><p className="mt-4 text-sm text-[var(--foreground-muted)]">Your financial data is strictly yours. Zero third-party ad tracking, no automated bank harvesting.</p></div>} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
           </Route>
 
           {/* Authentication Routes */}
