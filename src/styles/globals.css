@@ -8,7 +8,7 @@
      - Deep Burgundy:#722F37
      ========================================================================== */
   --color-burgundy: #722f37;
-  --color-burgundy-hover: #58242b;
+  --color-burgundy-hover: #4e141b;
   --color-burgundy-light: #d96b77;
   --color-burgundy-soft: #fbf2f3;
 
@@ -22,8 +22,8 @@
   --color-latte-light: #e5ded7;
   --color-latte-dark: #7a6b5e;
 
-  --color-espresso: #2a201c;
-  --color-espresso-muted: #5e5148;
+  --color-espresso: #141110;
+  --color-espresso-muted: #4a3c36;
 
   --color-income: #15803d;
   --color-expense: #b91c1c;
@@ -37,26 +37,26 @@
   --brand-mocha: #e8dcc6;
   --brand-latte: #b7a89a;
 
-  /* Semantic Theme Tokens - Light Mode */
-  --background: #fbf9f5;
-  --surface: #ffffff;
-  --surface-raised: #f5ede0;
-  --foreground: #2a201c;
-  --foreground-muted: #5e5148;
+  /* Semantic Theme Tokens - Warm Mocha/Champagne Base, Zero Pale White */
+  --background: #f7efe1;
+  --surface: #fcf8f2;
+  --surface-raised: #f2e4d2;
+  --foreground: #100c0b;
+  --foreground-muted: #4a3c36;
 
   --primary: #722f37;
-  --primary-foreground: #ffffff;
-  --primary-hover: #58242b;
+  --primary-foreground: #fcf8f2;
+  --primary-hover: #4e141b;
 
   --secondary: #e8dcc6;
-  --secondary-foreground: #2a201c;
-  --muted: #f2e9dc;
-  --muted-foreground: #7a6b5e;
+  --secondary-foreground: #100c0b;
+  --muted: #eddcc8;
+  --muted-foreground: #68574e;
   --accent: #b7a89a;
-  --accent-foreground: #2a201c;
+  --accent-foreground: #100c0b;
 
-  --border: #b7a89a;
-  --input: #b7a89a;
+  --border: #c2b09d;
+  --input: #c2b09d;
   --ring: #722f37;
 
   --income: #15803d;
@@ -91,9 +91,9 @@
   --expense: #f87171;
 }
 
-/* Explicit fallback utilities ensuring colors ALWAYS display */
+/* Explicit fallback utilities ensuring colors ALWAYS display boldly */
 .bg-burgundy { background-color: #722f37 !important; }
-.bg-burgundy-hover:hover { background-color: #58242b !important; }
+.bg-burgundy-hover:hover { background-color: #4e141b !important; }
 .bg-burgundy-light { background-color: #d96b77 !important; }
 .bg-burgundy-soft { background-color: #fbf2f3 !important; }
 .text-burgundy { color: #722f37 !important; }

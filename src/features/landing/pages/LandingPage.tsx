@@ -1,45 +1,41 @@
 import { Link } from 'react-router-dom';
-import { MochaWaveBackground } from '@/features/landing/components/MochaWaveBackground';
 import { SamriddLogo } from '@/features/landing/components/SamriddLogo';
 import {
-  ShieldCheck,
-  TrendingUp,
-  Receipt,
   Sparkles,
-  PieChart,
-  Tag,
-  BarChart3,
+  Layers,
+  Wallet,
+  Receipt,
   Sliders,
+  Tags,
+  BarChart3,
   CheckCircle2,
+  Lock,
 } from 'lucide-react';
 
 export default function LandingPage() {
   return (
     <div className="relative min-h-[calc(100vh-5rem)] flex flex-col justify-between">
-      {/* Wave Background with Warm Ivory-to-Champagne Gradient & Subtle Burgundy Undertones (Zero external images) */}
-      <MochaWaveBackground />
-
       {/* Hero Section — Logo on Left, Headings on Right, Centered Get Started Button & Bottom Quote */}
       <section className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-8 pb-16 sm:pt-14 sm:pb-20 w-full flex-1 flex flex-col justify-center">
         {/* Two-Column Grid: Left = Logo & Plan Track Grow, Right = Headings & Description */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: SAMRIDD Logo + PLAN • TRACK • GROW in burgundy */}
+          {/* Left Column: SAMRIDD Logo + PLAN • TRACK • GROW in bold burgundy */}
           <div className="lg:col-span-5 flex flex-col items-center text-center">
             <SamriddLogo size="lg" align="center" />
           </div>
 
-          {/* Right Column: Take Control of Your Finances + Description */}
+          {/* Right Column: Take Control of Your Finances + Description + Quote */}
           <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
-            {/* Main Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-[4.25rem] font-serif font-bold tracking-tight leading-[1.12]">
-              <span className="text-[#141110] block">Take Control of</span>
-              <span className="text-[#141110]">Your </span>
-              <span className="text-burgundy italic font-serif">Finances</span>
+            {/* Main Headline with high-contrast obsidian black & deep burgundy */}
+            <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] font-serif font-black tracking-tight leading-[1.10]">
+              <span className="text-[#100C0B] block">Take Control of</span>
+              <span className="text-[#100C0B]">Your </span>
+              <span className="text-burgundy italic font-serif font-black">Finances</span>
             </h1>
 
-            {/* Delicate curved arc underline under "Your Finances" matching reference image */}
+            {/* Delicate curved arc underline under "Your Finances" */}
             <svg
-              className="w-48 sm:w-64 h-3 sm:h-4 text-burgundy/40 mt-1"
+              className="w-48 sm:w-64 h-3 sm:h-4 text-burgundy mt-1"
               viewBox="0 0 240 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -48,166 +44,362 @@ export default function LandingPage() {
               <path
                 d="M 4 12 C 70 3, 170 3, 236 12"
                 stroke="currentColor"
-                strokeWidth="2.5"
+                strokeWidth="3"
                 strokeLinecap="round"
               />
             </svg>
 
-            {/* Subtitle / Description in normal black color */}
-            <p className="mt-6 text-base sm:text-lg lg:text-xl font-serif text-[#141110]/85 max-w-xl leading-relaxed">
+            {/* Subtitle / Description in rich, crisp dark text */}
+            <p className="mt-6 text-base sm:text-lg lg:text-xl font-serif text-[#100C0B] max-w-xl leading-relaxed font-medium">
               Track your income, manage expenses, master your budgets,<br className="hidden sm:inline" />
               plan life&apos;s biggest moments, and achieve your financial goals.
             </p>
+
+            {/* Quote Line: ~ all in one place ~ */}
+            <p className="mt-4 text-xl sm:text-2xl lg:text-[1.75rem] font-serif italic text-burgundy font-bold tracking-wide">
+              ~ all in one place ~
+            </p>
           </div>
         </div>
 
-        {/* Centrally Aligned Down the Contents: Get Started Button */}
-        <div className="mt-12 sm:mt-16 flex justify-center items-center w-full">
+        {/* Centrally Aligned Down the Contents: Glamorous Get Started Button */}
+        <div className="mt-12 sm:mt-16 flex flex-col items-center justify-center w-full gap-3">
           <Link
             to="/signup"
-            className="inline-flex items-center gap-3 px-9 py-3.5 sm:px-10 sm:py-4 rounded-full bg-burgundy text-[#E8DCC6] font-serif font-semibold text-base sm:text-lg shadow-xl hover:bg-burgundy-hover hover:shadow-2xl transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 group"
+            className="inline-flex items-center gap-3 px-10 py-4 sm:px-12 sm:py-4.5 rounded-full bg-burgundy text-[#E8DCC6] font-serif font-bold text-lg sm:text-xl shadow-2xl hover:bg-burgundy-hover hover:text-[#FAF5EE] hover:shadow-burgundy/40 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 group ring-2 ring-burgundy/40"
           >
             <span>Get Started</span>
-            <span className="text-xl leading-none transition-transform group-hover:translate-x-1">&rarr;</span>
+            <span className="text-2xl leading-none transition-transform group-hover:translate-x-1.5">&rarr;</span>
           </Link>
+          <span className="text-xs font-serif text-espresso-muted/90 flex items-center gap-2">
+            <Lock className="w-3.5 h-3.5 text-income" />
+            <span>Zero Bank Scraping</span>
+            <span>&bull;</span>
+            <span>100% DPDP Aligned</span>
+            <span>&bull;</span>
+            <span>Single Sovereign Ledger</span>
+          </span>
         </div>
 
         {/* Bottom Tagline Divider */}
-        <div className="mt-16 sm:mt-24 flex items-center justify-center gap-4 text-burgundy/80 font-serif italic text-sm sm:text-base">
-          <span className="w-12 sm:w-28 h-[1px] bg-burgundy/30"></span>
-          <span>Smarter choices. A more secure tomorrow.</span>
-          <span className="w-12 sm:w-28 h-[1px] bg-burgundy/30"></span>
+        <div className="mt-16 sm:mt-24 flex items-center justify-center gap-4 text-burgundy font-serif italic font-semibold text-sm sm:text-base">
+          <span className="w-12 sm:w-28 h-[1.5px] bg-burgundy/50"></span>
+          <span>✦ &mdash; Smarter choices. A more secure tomorrow. &mdash; ✦</span>
+          <span className="w-12 sm:w-28 h-[1.5px] bg-burgundy/50"></span>
         </div>
       </section>
 
-      {/* Explore Section (§A.6) */}
-      <section id="explore" className="relative z-10 py-20 px-6 sm:px-10 lg:px-16 border-t border-latte/40 bg-mocha-surface/60 backdrop-blur-xs">
+      {/* Explore Section — High Glamour Bento Architecture */}
+      <section id="explore" className="relative z-10 py-24 px-6 sm:px-10 lg:px-16 border-t-2 border-latte/60 bg-[#FAF4EA]/80 backdrop-blur-xs">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="font-cinzel font-bold text-xs uppercase tracking-[0.2em] text-burgundy">Comprehensive Capability</span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-burgundy mt-2">
-              Everything you need. Nothing you don&apos;t.
+          {/* Section Editorial Header */}
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy/10 border-2 border-burgundy/25 text-burgundy font-cinzel font-bold text-xs uppercase tracking-[0.24em] mb-4 shadow-xs">
+              <span>✦ The Architecture of Clarity ✦</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-serif font-black text-burgundy tracking-tight leading-tight">
+              Everything you need to master your money. In one place.
             </h2>
-            <p className="font-serif italic text-espresso-muted mt-3 text-base">
-              Deterministic, manual-first Indian personal finance built on clean mathematical principles.
+            <p className="font-serif italic text-espresso-muted mt-4 text-base sm:text-lg leading-relaxed font-medium">
+              SAMRIDD brings your everyday financial activities into one sovereign, dignified space. Whether you draw a fixed salary, earn through consulting milestones, run a business, or receive occasional inflows, keep genuine control without chaotic spreadsheets or black-box bank connections.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 rounded-2xl border border-latte bg-surface/90 shadow-xs hover:border-burgundy/50 transition-colors">
-              <div className="w-11 h-11 rounded-xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-1 ring-latte/60">
-                <Receipt className="w-5 h-5" />
+          {/* Feature Bento Grid (7 Core Pillars Redesigned with High Glamour) */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
+            {/* 1. Moments — Occasion & Milestone Planning (Span 7 cols) */}
+            <div className="lg:col-span-7 p-7 sm:p-9 rounded-3xl border-2 border-[#C2B09D] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 rounded-2xl bg-mocha text-burgundy flex items-center justify-center ring-2 ring-burgundy/20 shadow-xs">
+                    <Sparkles className="w-6 h-6" />
+                  </div>
+                  <span className="text-[11px] font-cinzel uppercase tracking-[0.2em] text-burgundy font-bold px-3 py-1 rounded-full bg-burgundy/15 border border-burgundy/30">
+                    ✦ Signature Indian Experience ✦
+                  </span>
+                </div>
+                <h3 className="font-serif font-bold text-2xl sm:text-3xl text-burgundy mb-2">
+                  Moments &mdash; Plan the Finances Behind What Matters
+                </h3>
+                <p className="text-sm sm:text-base text-[#1E1715] leading-relaxed font-sans font-medium">
+                  Life&apos;s biggest occasions come with significant commitments. Moments gives you a dedicated canvas to budget and track weddings, festivals, pujas, birthdays, or family vacations&mdash;monitoring planned costs, cash paid, and pending commitments without distorting your regular monthly operating budget.
+                </p>
               </div>
-              <h3 className="font-serif font-bold text-lg text-burgundy mb-2">Single Unified Ledger</h3>
-              <p className="text-xs text-espresso-muted leading-relaxed font-sans">
-                Income and expenses live in one central ledger. Income and Transactions pages are seamless filtered views.
-              </p>
+
+              {/* Glamorous Interactive Preview: Sister's Wedding Budget */}
+              <div className="mt-6 p-4 sm:p-5 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]/60 space-y-3.5 shadow-inner">
+                <div className="flex items-center justify-between text-xs sm:text-sm">
+                  <span className="font-serif font-bold text-burgundy flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-burgundy" /> Sister&apos;s Wedding &bull; Winter 2026
+                  </span>
+                  <span className="text-[#100C0B] font-mono font-bold">Total Budget: &#8377;5,00,000</span>
+                </div>
+                <div className="w-full bg-latte/40 h-2.5 rounded-full overflow-hidden p-0.5">
+                  <div className="bg-burgundy h-full rounded-full transition-all duration-500 shadow-xs" style={{ width: '72%' }} />
+                </div>
+                <div className="grid grid-cols-3 gap-3 pt-1 text-xs">
+                  <div className="bg-[#FAF4EA] p-2 rounded-xl border border-latte/40">
+                    <span className="block text-[10px] uppercase tracking-wider text-latte-dark font-bold">Actual Paid</span>
+                    <span className="font-mono font-bold text-income text-sm">&#8377;2,80,000</span>
+                  </div>
+                  <div className="bg-[#FAF4EA] p-2 rounded-xl border border-latte/40">
+                    <span className="block text-[10px] uppercase tracking-wider text-latte-dark font-bold">Committed</span>
+                    <span className="font-mono font-bold text-burgundy text-sm">&#8377;80,000</span>
+                  </div>
+                  <div className="bg-[#FAF4EA] p-2 rounded-xl border border-latte/40">
+                    <span className="block text-[10px] uppercase tracking-wider text-latte-dark font-bold">Buffer Left</span>
+                    <span className="font-mono font-bold text-[#100C0B] text-sm">&#8377;1,40,000</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="p-6 rounded-2xl border border-latte bg-surface/90 shadow-xs hover:border-burgundy/50 transition-colors">
-              <div className="w-11 h-11 rounded-xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-1 ring-latte/60">
-                <ShieldCheck className="w-5 h-5" />
+            {/* 2. Independent Financial Profiles (Span 5 cols) */}
+            <div className="lg:col-span-5 p-7 sm:p-9 rounded-3xl border-2 border-[#C2B09D] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+              <div>
+                <div className="w-12 h-12 rounded-2xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-2 ring-burgundy/20 shadow-xs">
+                  <Layers className="w-6 h-6" />
+                </div>
+                <h3 className="font-serif font-bold text-2xl sm:text-3xl text-burgundy mb-2">
+                  Independent Financial Profiles
+                </h3>
+                <p className="text-sm sm:text-base text-[#1E1715] leading-relaxed font-sans font-medium">
+                  Manage personal, freelance, and family finances within a single account. Each profile operates as a sovereign workspace with independent transactions, categories, budgets, and reports with zero cross-profile bleed.
+                </p>
               </div>
-              <h3 className="font-serif font-bold text-lg text-burgundy mb-2">Isolated Profiles</h3>
-              <p className="text-xs text-espresso-muted leading-relaxed font-sans">
-                Keep personal, family, and business finances strictly independent with schema-level composite key boundaries.
-              </p>
+
+              {/* Glamorous Profile Switcher Preview */}
+              <div className="mt-6 p-4 sm:p-5 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]/60 flex flex-col gap-3 shadow-inner">
+                <div className="text-[11px] font-cinzel uppercase tracking-wider text-latte-dark font-bold">Sovereign Profile Workspaces</div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3.5 py-1.5 rounded-xl bg-burgundy text-[#E8DCC6] font-serif text-xs font-bold shadow-sm flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-income animate-pulse" /> Personal Finance
+                  </span>
+                  <span className="px-3.5 py-1.5 rounded-xl bg-[#FAF4EA] border border-[#C2B09D] text-[#1E1715] font-serif text-xs font-semibold">
+                    Freelance Studio
+                  </span>
+                  <span className="px-3.5 py-1.5 rounded-xl bg-[#FAF4EA] border border-[#C2B09D] text-[#1E1715] font-serif text-xs font-semibold">
+                    Family Trust
+                  </span>
+                </div>
+                <span className="text-xs text-espresso-muted font-serif italic pt-1">
+                  ✓ Composite-key boundary isolation guarantees zero data bleed.
+                </span>
+              </div>
             </div>
 
-            <div className="p-6 rounded-2xl border border-latte bg-surface/90 shadow-xs hover:border-burgundy/50 transition-colors">
-              <div className="w-11 h-11 rounded-xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-1 ring-latte/60">
-                <Sparkles className="w-5 h-5" />
+            {/* 3. Income Management (Span 4 cols) */}
+            <div className="lg:col-span-4 p-7 sm:p-8 rounded-3xl border-2 border-[#C2B09D] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+              <div>
+                <div className="w-11 h-11 rounded-2xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-2 ring-burgundy/20 shadow-xs">
+                  <Wallet className="w-5 h-5" />
+                </div>
+                <h3 className="font-serif font-bold text-xl sm:text-2xl text-burgundy mb-2">
+                  Income Management
+                </h3>
+                <p className="text-sm text-[#1E1715] leading-relaxed font-sans font-medium">
+                  Know exactly what you earn. Easily log fixed salaries, freelance remittances, business dividends, daily earnings, or festive shagun. Support for multiple inflows on the same day.
+                </p>
               </div>
-              <h3 className="font-serif font-bold text-lg text-burgundy mb-2">Life Event &ldquo;Moments&rdquo;</h3>
-              <p className="text-xs text-espresso-muted leading-relaxed font-sans">
-                Plan weddings, education, trips, or house renovations. Track commitments vs actual payments with zero double-counting.
-              </p>
+
+              {/* Inflow Snapshot */}
+              <div className="mt-5 p-4 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]/60 space-y-2.5 text-xs shadow-inner">
+                <div className="flex items-center justify-between font-mono bg-[#FAF4EA] p-2 rounded-xl border border-latte/30">
+                  <span className="text-[#100C0B] font-semibold">Consulting Retainer &bull; UPI</span>
+                  <span className="text-income font-extrabold text-sm">+&#8377;45,000</span>
+                </div>
+                <div className="flex items-center justify-between font-mono bg-[#FAF4EA] p-2 rounded-xl border border-latte/30">
+                  <span className="text-[#100C0B] font-semibold">Freelance Milestone &bull; Bank</span>
+                  <span className="text-income font-extrabold text-sm">+&#8377;18,500</span>
+                </div>
+                <div className="flex items-center justify-between font-mono bg-[#FAF4EA] p-2 rounded-xl border border-latte/30">
+                  <span className="text-[#100C0B] font-semibold">Occasional Shagun &bull; Cash</span>
+                  <span className="text-income font-extrabold text-sm">+&#8377;5,000</span>
+                </div>
+              </div>
             </div>
 
-            <div className="p-6 rounded-2xl border border-latte bg-surface/90 shadow-xs hover:border-burgundy/50 transition-colors">
-              <div className="w-11 h-11 rounded-xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-1 ring-latte/60">
-                <PieChart className="w-5 h-5" />
+            {/* 4. Single Unified Ledger (Span 4 cols) */}
+            <div className="lg:col-span-4 p-7 sm:p-8 rounded-3xl border-2 border-[#C2B09D] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+              <div>
+                <div className="w-11 h-11 rounded-2xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-2 ring-burgundy/20 shadow-xs">
+                  <Receipt className="w-5 h-5" />
+                </div>
+                <h3 className="font-serif font-bold text-xl sm:text-2xl text-burgundy mb-2">
+                  Unified Central Ledger
+                </h3>
+                <p className="text-sm text-[#1E1715] leading-relaxed font-sans font-medium">
+                  Keep every transaction organized. Income and expenses live together in mathematical harmony. Filter by payment method (UPI, Netbanking, Cards, Cash) with deterministic paise precision.
+                </p>
               </div>
-              <h3 className="font-serif font-bold text-lg text-burgundy mb-2">Monthly Budgets</h3>
-              <p className="text-xs text-espresso-muted leading-relaxed font-sans">
-                Set category-level and overall monthly spending limits. Monitor real-time progress with visual threshold alerts.
-              </p>
+
+              {/* Central Ledger Snapshot */}
+              <div className="mt-5 p-4 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]/60 space-y-2.5 text-xs shadow-inner">
+                <div className="flex items-center justify-between text-xs text-latte-dark border-b border-latte/40 pb-1.5 font-bold">
+                  <span>Single Ledger Feed</span>
+                  <span className="font-mono text-income font-extrabold">Net: +&#8377;38,250.00</span>
+                </div>
+                <div className="flex items-center justify-between font-mono bg-[#FAF4EA] p-2 rounded-xl border border-latte/30">
+                  <span className="text-[#100C0B] truncate font-medium">Groceries &bull; UPI</span>
+                  <span className="text-burgundy font-extrabold">-&#8377;2,140.00</span>
+                </div>
+                <div className="flex items-center justify-between font-mono bg-[#FAF4EA] p-2 rounded-xl border border-latte/30">
+                  <span className="text-[#100C0B] truncate font-medium">Electricity &bull; Netbanking</span>
+                  <span className="text-burgundy font-extrabold">-&#8377;1,820.00</span>
+                </div>
+              </div>
             </div>
 
-            <div className="p-6 rounded-2xl border border-latte bg-surface/90 shadow-xs hover:border-burgundy/50 transition-colors">
-              <div className="w-11 h-11 rounded-xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-1 ring-latte/60">
-                <TrendingUp className="w-5 h-5" />
+            {/* 5. Budget Planning (Span 4 cols) */}
+            <div className="lg:col-span-4 p-7 sm:p-8 rounded-3xl border-2 border-[#C2B09D] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+              <div>
+                <div className="w-11 h-11 rounded-2xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-2 ring-burgundy/20 shadow-xs">
+                  <Sliders className="w-5 h-5" />
+                </div>
+                <h3 className="font-serif font-bold text-xl sm:text-2xl text-burgundy mb-2">
+                  Budget Planning
+                </h3>
+                <p className="text-sm text-[#1E1715] leading-relaxed font-sans font-medium">
+                  Give every rupee a purpose. Set an overall monthly ceiling along with category-specific limits. Track real-time utilization pacing and receive proactive threshold warnings before overspending.
+                </p>
               </div>
-              <h3 className="font-serif font-bold text-lg text-burgundy mb-2">Paise Precision (INR)</h3>
-              <p className="text-xs text-espresso-muted leading-relaxed font-sans">
-                Zero float drift. All calculations are executed in integer paise with Indian Lakhs and Crores grouping.
-              </p>
+
+              {/* Budget Pacing Snapshot */}
+              <div className="mt-5 p-4 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]/60 space-y-3 text-xs shadow-inner">
+                <div className="flex justify-between font-serif">
+                  <span className="text-burgundy font-bold">Dining &amp; Socializing</span>
+                  <span className="font-mono text-[#100C0B] font-bold">&#8377;8,400 / &#8377;10,000</span>
+                </div>
+                <div className="w-full bg-latte/40 h-2.5 rounded-full overflow-hidden p-0.5">
+                  <div className="bg-amber-600 h-full rounded-full" style={{ width: '84%' }} />
+                </div>
+                <div className="flex items-center gap-1.5 text-xs font-bold text-amber-900 bg-amber-100/80 px-2.5 py-1 rounded-lg border border-amber-300 w-fit">
+                  <span>&#9888; 84% utilized &bull; 6 days left in cycle</span>
+                </div>
+              </div>
             </div>
 
-            <div className="p-6 rounded-2xl border border-latte bg-surface/90 shadow-xs hover:border-burgundy/50 transition-colors">
-              <div className="w-11 h-11 rounded-xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-1 ring-latte/60">
-                <BarChart3 className="w-5 h-5" />
+            {/* 6. Categories — Organise Your Money Your Way (Span 6 cols) */}
+            <div className="lg:col-span-6 p-7 sm:p-8 rounded-3xl border-2 border-[#C2B09D] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+              <div>
+                <div className="w-11 h-11 rounded-2xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-2 ring-burgundy/20 shadow-xs">
+                  <Tags className="w-5 h-5" />
+                </div>
+                <h3 className="font-serif font-bold text-xl sm:text-2xl text-burgundy mb-2">
+                  Categories &mdash; Organise Your Money Your Way
+                </h3>
+                <p className="text-sm sm:text-base text-[#1E1715] leading-relaxed font-sans font-medium">
+                  Bring structure to your records through meaningful classifications. Seeded with authentic Indian spending habits, with complete freedom to create, color-code, and archive custom tags.
+                </p>
               </div>
-              <h3 className="font-serif font-bold text-lg text-burgundy mb-2">Indian Financial Year</h3>
-              <p className="text-xs text-espresso-muted leading-relaxed font-sans">
-                Native April&ndash;March FY reporting presets alongside calendar years, aligned with Indian tax conventions.
-              </p>
+
+              {/* Category Badges Preview */}
+              <div className="mt-6 p-4 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]/60 shadow-inner">
+                <div className="flex flex-wrap gap-2 text-xs">
+                  <span className="px-3 py-1.5 rounded-xl bg-burgundy/15 border border-burgundy/40 text-burgundy font-serif font-bold shadow-xs">
+                    &#128591; Puja &amp; Rituals
+                  </span>
+                  <span className="px-3 py-1.5 rounded-xl bg-income/15 border border-income/40 text-income font-serif font-bold shadow-xs">
+                    &#127806; Kitchen &amp; Groceries
+                  </span>
+                  <span className="px-3 py-1.5 rounded-xl bg-latte/25 border border-latte/50 text-[#100C0B] font-serif font-bold shadow-xs">
+                    &#127968; Rent &amp; Maintenance
+                  </span>
+                  <span className="px-3 py-1.5 rounded-xl bg-latte/25 border border-latte/50 text-[#100C0B] font-serif font-bold shadow-xs">
+                    &#128663; Vehicle &amp; Fuel
+                  </span>
+                  <span className="px-3 py-1.5 rounded-xl bg-burgundy/15 border border-burgundy/40 text-burgundy font-serif font-bold shadow-xs">
+                    &#127873; Gifting &amp; Shagun
+                  </span>
+                </div>
+              </div>
             </div>
 
-            <div className="p-6 rounded-2xl border border-latte bg-surface/90 shadow-xs hover:border-burgundy/50 transition-colors">
-              <div className="w-11 h-11 rounded-xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-1 ring-latte/60">
-                <Tag className="w-5 h-5" />
+            {/* 7. Financial Reports — Turn Records into Clarity (Span 6 cols) */}
+            <div className="lg:col-span-6 p-7 sm:p-8 rounded-3xl border-2 border-[#C2B09D] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+              <div>
+                <div className="w-11 h-11 rounded-2xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-2 ring-burgundy/20 shadow-xs">
+                  <BarChart3 className="w-5 h-5" />
+                </div>
+                <h3 className="font-serif font-bold text-xl sm:text-2xl text-burgundy mb-2">
+                  Financial Reports &mdash; Turn Records into Clarity
+                </h3>
+                <p className="text-sm sm:text-base text-[#1E1715] leading-relaxed font-sans font-medium">
+                  Transform entries into foresight. Explore income and expense trends, evaluate category-wise distribution, and toggle natively between Calendar Year and April&ndash;March Indian Financial Year presets.
+                </p>
               </div>
-              <h3 className="font-serif font-bold text-lg text-burgundy mb-2">Custom Categories</h3>
-              <p className="text-xs text-espresso-muted leading-relaxed font-sans">
-                Seeded with standard Indian expenditure tags, with full freedom to customize, color-code, and archive tags.
-              </p>
-            </div>
 
-            <div className="p-6 rounded-2xl border border-latte bg-surface/90 shadow-xs hover:border-burgundy/50 transition-colors">
-              <div className="w-11 h-11 rounded-xl bg-mocha text-burgundy flex items-center justify-center mb-4 ring-1 ring-latte/60">
-                <Sliders className="w-5 h-5" />
+              {/* Reports Preview */}
+              <div className="mt-6 p-4 rounded-2xl bg-[#F6EFE3] border border-[#C2B09D]/60 space-y-2.5 text-xs shadow-inner">
+                <div className="flex items-center justify-between">
+                  <span className="font-serif font-bold text-burgundy text-sm">April &ndash; March Indian FY Preset</span>
+                  <span className="px-3 py-1 rounded-full bg-income/20 text-income font-mono text-xs font-black border border-income/30">
+                    Net Savings: +34.8%
+                  </span>
+                </div>
+                <p className="text-[#1E1715] text-xs font-sans font-medium">
+                  Compare monthly trajectories, identify seasonal surges, and make informed choices with zero confusing financial jargon.
+                </p>
               </div>
-              <h3 className="font-serif font-bold text-lg text-burgundy mb-2">Zero-Trust Admin</h3>
-              <p className="text-xs text-espresso-muted leading-relaxed font-sans">
-                Administrators see system aggregates only. Zero visibility into personal transactions, ledger rows, or balances.
+            </div>
+          </div>
+
+          {/* Grand Philosophy Centerpiece Banner */}
+          <div className="mt-20 rounded-3xl border-2 border-burgundy/40 bg-gradient-to-br from-[#FAF4EA] via-[#F5ECE0] to-[#EBDCC8] p-8 sm:p-14 text-center relative overflow-hidden shadow-xl">
+            <div className="max-w-3xl mx-auto space-y-5">
+              <span className="font-cinzel font-bold text-xs uppercase tracking-[0.26em] text-burgundy">
+                ✦ The SAMRIDD Philosophy ✦
+              </span>
+              <h3 className="text-2xl sm:text-4xl lg:text-5xl font-serif font-black text-burgundy leading-snug">
+                One platform. A clearer financial picture.
+              </h3>
+              <p className="font-serif italic text-base sm:text-xl text-[#1E1715] leading-relaxed font-medium">
+                &ldquo;SAMRIDD is designed around the way people actually earn, spend, and plan. You don&apos;t need a fixed monthly salary, multiple fragmented applications, or complicated spreadsheets to organise your money. Start with what you earn, record what you spend, plan for what matters, and build timeless financial calm.&rdquo;
               </p>
+              <div className="pt-4 flex justify-center">
+                <Link
+                  to="/signup"
+                  className="px-10 py-4 rounded-full bg-burgundy text-[#E8DCC6] font-serif font-bold text-base sm:text-lg hover:bg-burgundy-hover hover:text-[#FAF5EE] shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                >
+                  Start Your Sovereign Ledger Today &rarr;
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="relative z-10 py-20 px-6 sm:px-10 lg:px-16 border-t border-latte/40 bg-surface/40">
+      <section id="how-it-works" className="relative z-10 py-24 px-6 sm:px-10 lg:px-16 border-t-2 border-latte/60 bg-[#FAF4EA]/60">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-xl mx-auto mb-16">
-            <span className="font-cinzel font-bold text-xs uppercase tracking-[0.2em] text-burgundy">Simple &amp; Intentional</span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-burgundy mt-2">
+            <span className="font-cinzel font-bold text-xs uppercase tracking-[0.24em] text-burgundy">✦ Simple &amp; Intentional ✦</span>
+            <h2 className="text-3xl sm:text-4xl font-serif font-black text-burgundy mt-2">
               Three steps to complete clarity
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-start p-8 rounded-2xl border border-latte bg-mocha-surface/90 shadow-xs">
-              <span className="font-cinzel font-black text-3xl text-burgundy/40 mb-3">01</span>
+            <div className="flex flex-col items-start p-8 rounded-3xl border-2 border-[#C2B09D] bg-[#FCF8F2] shadow-sm hover:shadow-md transition-all">
+              <span className="font-cinzel font-black text-4xl text-burgundy/40 mb-3">01</span>
               <h3 className="font-serif font-bold text-xl text-burgundy mb-2">Create Your Profile</h3>
-              <p className="text-sm text-espresso-muted leading-relaxed">
+              <p className="text-sm text-[#1E1715] leading-relaxed font-medium">
                 Sign up in seconds. Establish your first isolated financial profile (e.g., Personal, Family, or Business) with custom default categories.
               </p>
             </div>
 
-            <div className="flex flex-col items-start p-8 rounded-2xl border border-latte bg-mocha-surface/90 shadow-xs">
-              <span className="font-cinzel font-black text-3xl text-burgundy/40 mb-3">02</span>
+            <div className="flex flex-col items-start p-8 rounded-3xl border-2 border-[#C2B09D] bg-[#FCF8F2] shadow-sm hover:shadow-md transition-all">
+              <span className="font-cinzel font-black text-4xl text-burgundy/40 mb-3">02</span>
               <h3 className="font-serif font-bold text-xl text-burgundy mb-2">Record Transactions</h3>
-              <p className="text-sm text-espresso-muted leading-relaxed">
+              <p className="text-sm text-[#1E1715] leading-relaxed font-medium">
                 Log income and expenses manually with payment methods (UPI, Card, Cash, Netbanking). Enjoy instant deterministic balance reconciliations.
               </p>
             </div>
 
-            <div className="flex flex-col items-start p-8 rounded-2xl border border-latte bg-mocha-surface/90 shadow-xs">
-              <span className="font-cinzel font-black text-3xl text-burgundy/40 mb-3">03</span>
+            <div className="flex flex-col items-start p-8 rounded-3xl border-2 border-[#C2B09D] bg-[#FCF8F2] shadow-sm hover:shadow-md transition-all">
+              <span className="font-cinzel font-black text-4xl text-burgundy/40 mb-3">03</span>
               <h3 className="font-serif font-bold text-xl text-burgundy mb-2">Plan &amp; Master Goals</h3>
-              <p className="text-sm text-espresso-muted leading-relaxed">
+              <p className="text-sm text-[#1E1715] leading-relaxed font-medium">
                 Set monthly category budgets and orchestrate major life Moments. Watch your net savings rate grow with trusted period analytics.
               </p>
             </div>
@@ -216,25 +408,25 @@ export default function LandingPage() {
       </section>
 
       {/* About Us Section */}
-      <section id="about" className="relative z-10 py-20 px-6 sm:px-10 lg:px-16 border-t border-latte/40 bg-mocha-surface/70">
+      <section id="about" className="relative z-10 py-24 px-6 sm:px-10 lg:px-16 border-t-2 border-latte/60 bg-[#FAF4EA]/90">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="font-cinzel font-bold text-xs uppercase tracking-[0.2em] text-burgundy">The Philosophy</span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-burgundy mt-2 mb-6">
+          <span className="font-cinzel font-bold text-xs uppercase tracking-[0.24em] text-burgundy">✦ The Philosophy ✦</span>
+          <h2 className="text-3xl sm:text-4xl font-serif font-black text-burgundy mt-2 mb-6">
             Why Manual-First Matters
           </h2>
-          <p className="font-serif italic text-lg sm:text-xl text-espresso-muted leading-relaxed max-w-3xl mx-auto">
+          <p className="font-serif italic text-lg sm:text-2xl text-[#100C0B] leading-relaxed max-w-3xl mx-auto font-medium">
             &ldquo;When software automatically connects to bank accounts, users disconnect from the reality of their spending. By recording transactions intentionally, you cultivate true awareness, eliminate privacy liabilities, and regain complete sovereignty over your financial life.&rdquo;
           </p>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm font-serif font-semibold text-burgundy">
+          <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm font-serif font-bold text-burgundy">
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-income" /> Zero Bank Scraping
+              <CheckCircle2 className="w-5 h-5 text-income" /> Zero Bank Scraping
             </span>
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-income" /> 100% Indian Data Sovereignty
+              <CheckCircle2 className="w-5 h-5 text-income" /> 100% Indian Data Sovereignty
             </span>
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-income" /> Fully DPDP Act (2023) Aligned
+              <CheckCircle2 className="w-5 h-5 text-income" /> Fully DPDP Act (2023) Aligned
             </span>
           </div>
         </div>
