@@ -6,37 +6,37 @@ export default function TransactionsPage() {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Transactions Ledger</h1>
-          <p className="text-sm text-[var(--foreground-muted)]">
+          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-burgundy">Transactions Ledger</h1>
+          <p className="text-sm font-medium text-latte-dark">
             Single unified ledger &middot; Keyset paginated &middot; Deterministic INR
           </p>
         </div>
         <div className="flex items-center gap-3">
-          <button className="px-3.5 py-2 rounded-lg border border-[var(--border)] bg-[var(--surface)] text-sm font-medium hover:bg-[var(--surface-raised)] flex items-center gap-1.5 transition-colors">
+          <button className="px-4 py-2 rounded-xl border border-latte bg-mocha text-burgundy text-sm font-bold hover:bg-mocha-surface flex items-center gap-1.5 transition-colors shadow-xs">
             <Download className="w-4 h-4" />
             <span>Export CSV</span>
           </button>
-          <button className="px-3.5 py-2 rounded-lg bg-[var(--primary)] text-white text-sm font-medium hover:opacity-90 flex items-center gap-1.5 transition-opacity shadow-sm">
+          <button className="px-4 py-2 rounded-xl bg-burgundy text-white text-sm font-bold hover:bg-burgundy-hover flex items-center gap-1.5 transition-opacity shadow-md">
             <Plus className="w-4 h-4" />
             <span>New Transaction</span>
           </button>
         </div>
       </div>
 
-      <div className="p-4 rounded-xl border border-[var(--border)] bg-[var(--surface)] flex flex-wrap items-center justify-between gap-4">
+      <div className="p-4 rounded-2xl border border-latte bg-mocha-surface flex flex-wrap items-center justify-between gap-4 shadow-xs">
         <div className="flex items-center gap-2">
-          <Filter className="w-4 h-4 text-[var(--foreground-muted)]" />
-          <span className="text-xs font-semibold">Filters:</span>
-          <span className="text-xs bg-[var(--surface-raised)] px-2.5 py-1 rounded-md text-[var(--foreground)]">All Types</span>
-          <span className="text-xs bg-[var(--surface-raised)] px-2.5 py-1 rounded-md text-[var(--foreground)]">All Categories</span>
+          <Filter className="w-4 h-4 text-burgundy" />
+          <span className="text-xs font-bold text-burgundy">Filters:</span>
+          <span className="text-xs bg-mocha border border-latte px-3 py-1 rounded-lg text-burgundy font-bold">All Types</span>
+          <span className="text-xs bg-mocha border border-latte px-3 py-1 rounded-lg text-burgundy font-bold">All Categories</span>
         </div>
-        <div className="text-xs text-[var(--foreground-muted)]">
+        <div className="text-xs text-latte-dark font-medium">
           Showing keyset cursor page 1 of 1
         </div>
       </div>
 
-      <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] overflow-hidden shadow-xs">
-        <div className="p-8 text-center text-sm text-[var(--foreground-muted)]">
+      <div className="rounded-2xl border border-latte bg-surface overflow-hidden shadow-xs">
+        <div className="p-8 text-center text-sm text-espresso-muted">
           Ready for transaction records. Database composite FKs and RLS ensure complete profile isolation.
         </div>
       </div>

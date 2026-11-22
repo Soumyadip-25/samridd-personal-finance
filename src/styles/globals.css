@@ -1,5 +1,119 @@
 @import "tailwindcss";
-@import "./tokens.css";
+
+@theme {
+  /* ==========================================================================
+     SAMRIDD Canonical Brand Palette (§A.5)
+     - Cosmic Latte: #B7A89A
+     - Mocha Cream:  #E8DCC6
+     - Deep Burgundy:#722F37
+     ========================================================================== */
+  --color-burgundy: #722f37;
+  --color-burgundy-hover: #58242b;
+  --color-burgundy-light: #d96b77;
+  --color-burgundy-soft: #fbf2f3;
+
+  --color-mocha: #e8dcc6;
+  --color-mocha-light: #fbf9f5;
+  --color-mocha-surface: #f5ede0;
+  --color-mocha-border: #dcd0be;
+  --color-mocha-dark: #2c2522;
+
+  --color-latte: #b7a89a;
+  --color-latte-light: #e5ded7;
+  --color-latte-dark: #7a6b5e;
+
+  --color-espresso: #2a201c;
+  --color-espresso-muted: #5e5148;
+
+  --color-income: #15803d;
+  --color-expense: #b91c1c;
+}
+
+:root {
+  --brand-burgundy: #722f37;
+  --brand-mocha: #e8dcc6;
+  --brand-latte: #b7a89a;
+
+  /* Semantic Theme Tokens - Light Mode */
+  --background: #fbf9f5;
+  --surface: #ffffff;
+  --surface-raised: #f5ede0;
+  --foreground: #2a201c;
+  --foreground-muted: #5e5148;
+
+  --primary: #722f37;
+  --primary-foreground: #ffffff;
+  --primary-hover: #58242b;
+
+  --secondary: #e8dcc6;
+  --secondary-foreground: #2a201c;
+  --muted: #f2e9dc;
+  --muted-foreground: #7a6b5e;
+  --accent: #b7a89a;
+  --accent-foreground: #2a201c;
+
+  --border: #b7a89a;
+  --input: #b7a89a;
+  --ring: #722f37;
+
+  --income: #15803d;
+  --expense: #b91c1c;
+
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: #141110;
+  --surface: #1e1917;
+  --surface-raised: #2c2522;
+  --foreground: #e8dcc6;
+  --foreground-muted: #b7a89a;
+
+  --primary: #d96b77;
+  --primary-foreground: #141110;
+  --primary-hover: #e4818c;
+
+  --secondary: #2c2522;
+  --secondary-foreground: #e8dcc6;
+  --muted: #241e1c;
+  --muted-foreground: #9e9185;
+  --accent: #3b322e;
+  --accent-foreground: #e8dcc6;
+
+  --border: rgba(183, 168, 154, 0.35);
+  --input: rgba(183, 168, 154, 0.4);
+  --ring: #d96b77;
+
+  --income: #22c55e;
+  --expense: #f87171;
+}
+
+/* Explicit fallback utilities ensuring colors ALWAYS display */
+.bg-burgundy { background-color: #722f37 !important; }
+.bg-burgundy-hover:hover { background-color: #58242b !important; }
+.bg-burgundy-light { background-color: #d96b77 !important; }
+.bg-burgundy-soft { background-color: #fbf2f3 !important; }
+.text-burgundy { color: #722f37 !important; }
+.border-burgundy { border-color: #722f37 !important; }
+
+.bg-mocha { background-color: #e8dcc6 !important; }
+.bg-mocha-light { background-color: #fbf9f5 !important; }
+.bg-mocha-surface { background-color: #f5ede0 !important; }
+.text-mocha { color: #e8dcc6 !important; }
+.border-mocha { border-color: #e8dcc6 !important; }
+
+.bg-latte { background-color: #b7a89a !important; }
+.bg-latte-light { background-color: #e5ded7 !important; }
+.text-latte { color: #b7a89a !important; }
+.text-latte-dark { color: #7a6b5e !important; }
+.border-latte { border-color: #b7a89a !important; }
+
+.bg-surface { background-color: var(--surface) !important; }
+.bg-surface-raised { background-color: var(--surface-raised) !important; }
+.bg-background { background-color: var(--background) !important; }
+.text-foreground { color: var(--foreground) !important; }
+.text-foreground-muted { color: var(--foreground-muted) !important; }
+.border-border { border-color: var(--border) !important; }
 
 @layer base {
   * {
@@ -8,7 +122,6 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
-    font-feature-settings: "rlig" 1, "calt" 1;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
 }

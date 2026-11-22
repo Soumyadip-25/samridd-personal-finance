@@ -22,27 +22,27 @@ export default function SignupPage() {
 
   return (
     <div>
-      <h2 className="text-2xl font-bold text-center mb-2">Create Account</h2>
-      <p className="text-xs text-center text-[var(--foreground-muted)] mb-6">
+      <h2 className="text-2xl font-black text-center mb-2 text-burgundy">Create Account</h2>
+      <p className="text-xs text-center text-espresso-muted mb-6 font-medium">
         Private, manual personal finance with zero bank linking
       </p>
 
       <form onSubmit={handleSignup} className="space-y-4">
         <div>
-          <label className="block text-xs font-semibold mb-1" htmlFor="signup-email">Email Address</label>
+          <label className="block text-xs font-bold mb-1.5 text-espresso" htmlFor="signup-email">Email Address</label>
           <input
             id="signup-email"
             type="email"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-3.5 py-2.5 rounded-lg border border-[var(--border)] bg-[var(--background)] text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-latte bg-surface text-sm focus:outline-none focus:ring-2 focus:ring-burgundy"
             placeholder="you@example.com"
           />
         </div>
 
         <div>
-          <label className="block text-xs font-semibold mb-1" htmlFor="signup-password">Password (min 10 characters)</label>
+          <label className="block text-xs font-bold mb-1.5 text-espresso" htmlFor="signup-password">Password (min 10 characters)</label>
           <input
             id="signup-password"
             type="password"
@@ -50,7 +50,7 @@ export default function SignupPage() {
             minLength={10}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-3.5 py-2.5 rounded-lg border border-[var(--border)] bg-[var(--background)] text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
+            className="w-full px-3.5 py-2.5 rounded-xl border border-latte bg-surface text-sm focus:outline-none focus:ring-2 focus:ring-burgundy"
             placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"
           />
         </div>
@@ -62,26 +62,26 @@ export default function SignupPage() {
             required
             checked={consent}
             onChange={(e) => setConsent(e.target.checked)}
-            className="mt-1 rounded border-[var(--border)] text-[var(--primary)] focus:ring-[var(--primary)]"
+            className="mt-1 rounded border-latte text-burgundy focus:ring-burgundy"
           />
-          <label htmlFor="terms-consent" className="text-xs text-[var(--foreground-muted)] leading-relaxed">
-            I agree to the <Link to="/terms" className="text-[var(--primary)] underline">Terms of Service</Link> and acknowledge the <Link to="/privacy" className="text-[var(--primary)] underline">Privacy Policy</Link> (DPDP Act aligned).
+          <label htmlFor="terms-consent" className="text-xs text-espresso-muted leading-relaxed font-medium">
+            I agree to the <Link to="/terms" className="text-burgundy font-bold underline">Terms of Service</Link> and acknowledge the <Link to="/privacy" className="text-burgundy font-bold underline">Privacy Policy</Link> (DPDP Act aligned).
           </label>
         </div>
 
         <button
           type="submit"
           disabled={loading || !consent}
-          className="w-full py-3 rounded-lg bg-[var(--primary)] text-white font-medium text-sm hover:opacity-90 disabled:opacity-50 transition-opacity flex items-center justify-center gap-2"
+          className="w-full py-3 rounded-xl bg-burgundy text-white font-bold text-sm hover:bg-burgundy-hover disabled:opacity-50 transition-all shadow-md flex items-center justify-center gap-2 ring-1 ring-burgundy-hover"
         >
           <UserPlus className="w-4 h-4" />
           <span>{loading ? 'Creating...' : 'Get Started'}</span>
         </button>
       </form>
 
-      <div className="mt-6 pt-6 border-t border-[var(--border)] text-center text-xs text-[var(--foreground-muted)]">
+      <div className="mt-6 pt-6 border-t border-latte text-center text-xs text-espresso-muted font-medium">
         Already have an account?{' '}
-        <Link to="/login" className="text-[var(--primary)] font-semibold hover:underline">
+        <Link to="/login" className="text-burgundy font-bold hover:underline">
           Sign In
         </Link>
       </div>
