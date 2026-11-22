@@ -29,95 +29,76 @@ export function MochaWaveBackground() {
         }}
       />
 
-      {/* Top-Left Botanical Leaf Shadow Overlay (media_1795378257537_9be9bcd6.png) */}
-      <div className="absolute top-0 left-0 w-[300px] h-[300px] sm:w-[420px] sm:h-[420px] lg:w-[520px] lg:h-[520px] pointer-events-none select-none z-10 overflow-hidden">
+      {/* Top-Left Botanical Leaf Shadow Overlay (Strict Top-Left Corner Anchor) */}
+      <div className="absolute top-0 left-0 w-[220px] h-[240px] sm:w-[280px] sm:h-[300px] lg:w-[320px] lg:h-[350px] pointer-events-none select-none z-10 overflow-hidden">
         <svg
           className="w-full h-full"
-          viewBox="0 0 500 500"
+          viewBox="0 0 320 350"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <defs>
-            {/* Diffused Sunlight Shadow Blur Filter */}
+            {/* Diffused Sunlight Shadow Blur Filter: 5.2 stdDeviation for rich tactile penumbra */}
             <filter id="leaf-shadow-blur" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur stdDeviation="7.5" />
+              <feGaussianBlur stdDeviation="5.2" />
             </filter>
 
-            {/* Sunlit Mocha Hazelnut Leaf Shadow Gradient */}
+            {/* Sunlit Mocha Hazelnut Leaf Shadow Gradient with Rich Contrast */}
             <linearGradient id="leaf-shadow-grad" x1="0%" y1="0%" x2="85%" y2="85%">
-              <stop offset="0%" stopColor="#7E6858" stopOpacity="0.45" />
-              <stop offset="35%" stopColor="#967F6E" stopOpacity="0.32" />
-              <stop offset="70%" stopColor="#B7A89A" stopOpacity="0.2" />
-              <stop offset="100%" stopColor="#B7A89A" stopOpacity="0.04" />
+              <stop offset="0%" stopColor="#5E4B3E" stopOpacity="0.75" />
+              <stop offset="35%" stopColor="#725C4C" stopOpacity="0.65" />
+              <stop offset="70%" stopColor="#8D7563" stopOpacity="0.48" />
+              <stop offset="100%" stopColor="#B7A89A" stopOpacity="0.22" />
             </linearGradient>
           </defs>
 
-          {/* Diffused Botanical Leaves & Stems Silhouette */}
+          {/* Diffused Botanical Leaves & Stem Silhouette strictly in the top-left corner */}
           <g filter="url(#leaf-shadow-blur)">
-            {/* Primary curved stem */}
+            {/* Single primary diagonal stem arching through top-left corner */}
             <path
-              d="M -20 -20 C 40 50, 120 140, 210 260 C 260 330, 310 410, 350 490"
+              d="M -20 -20 C 35 45, 95 125, 175 220 C 215 265, 255 305, 290 340"
               stroke="url(#leaf-shadow-grad)"
-              strokeWidth="5"
-              strokeLinecap="round"
-            />
-            {/* Secondary branching twig */}
-            <path
-              d="M 90 100 C 140 80, 210 75, 290 85"
-              stroke="url(#leaf-shadow-grad)"
-              strokeWidth="3.5"
+              strokeWidth="4.5"
               strokeLinecap="round"
             />
 
-            {/* Main stem foliage clusters */}
+            {/* Corner leaflets hugging the upper and left border */}
             <path
-              d="M 35 45 C 50 30, 95 45, 120 70 C 95 95, 50 80, 35 45 Z"
+              d="M -10 -5 C 10 -25, 50 -15, 75 15 C 55 35, 10 25, -10 -5 Z"
               fill="url(#leaf-shadow-grad)"
             />
             <path
-              d="M 60 25 C 90 5, 145 18, 180 40 C 150 62, 95 48, 60 25 Z"
-              fill="url(#leaf-shadow-grad)"
-            />
-            <path
-              d="M 85 105 C 125 90, 185 108, 225 138 C 190 168, 125 158, 85 105 Z"
-              fill="url(#leaf-shadow-grad)"
-            />
-            <path
-              d="M 70 125 C 45 155, 40 205, 50 240 C 70 215, 80 165, 70 125 Z"
-              fill="url(#leaf-shadow-grad)"
-            />
-            <path
-              d="M 125 175 C 160 165, 230 195, 270 240 C 230 275, 160 250, 125 175 Z"
-              fill="url(#leaf-shadow-grad)"
-            />
-            <path
-              d="M 115 195 C 95 235, 90 290, 110 330 C 130 295, 135 240, 115 195 Z"
-              fill="url(#leaf-shadow-grad)"
-            />
-            <path
-              d="M 165 235 C 215 225, 285 260, 330 310 C 285 350, 215 320, 165 235 Z"
-              fill="url(#leaf-shadow-grad)"
-            />
-            <path
-              d="M 150 250 C 135 290, 140 350, 165 390 C 190 360, 190 300, 150 250 Z"
-              fill="url(#leaf-shadow-grad)"
-            />
-            <path
-              d="M 205 305 C 240 325, 285 375, 310 430 C 275 430, 235 385, 205 305 Z"
+              d="M -15 20 C -30 45, -15 95, 15 120 C 35 95, 25 50, -15 20 Z"
               fill="url(#leaf-shadow-grad)"
             />
 
-            {/* Secondary branch foliage */}
+            {/* Pair 1 */}
             <path
-              d="M 135 90 C 175 70, 230 80, 270 100 C 235 125, 180 120, 135 90 Z"
+              d="M 30 55 C 5 80, 10 130, 42 155 C 65 130, 60 85, 30 55 Z"
               fill="url(#leaf-shadow-grad)"
             />
             <path
-              d="M 195 82 C 235 55, 295 60, 335 75 C 305 100, 245 100, 195 82 Z"
+              d="M 55 45 C 90 25, 140 35, 175 68 C 145 92, 95 80, 55 45 Z"
+              fill="url(#leaf-shadow-grad)"
+            />
+
+            {/* Pair 2 */}
+            <path
+              d="M 75 125 C 40 155, 35 210, 65 245 C 90 215, 95 160, 75 125 Z"
               fill="url(#leaf-shadow-grad)"
             />
             <path
-              d="M 255 85 C 295 70, 350 80, 385 100 C 355 125, 300 120, 255 85 Z"
+              d="M 105 105 C 150 85, 215 100, 255 138 C 215 168, 155 150, 105 105 Z"
+              fill="url(#leaf-shadow-grad)"
+            />
+
+            {/* Pair 3 */}
+            <path
+              d="M 130 195 C 95 230, 98 290, 130 330 C 155 295, 155 235, 130 195 Z"
+              fill="url(#leaf-shadow-grad)"
+            />
+            <path
+              d="M 160 170 C 210 150, 280 175, 320 220 C 280 250, 210 230, 160 170 Z"
               fill="url(#leaf-shadow-grad)"
             />
           </g>
@@ -173,15 +154,61 @@ export function MochaWaveBackground() {
           fill="url(#ambient-orb)"
         />
 
+        {/* Delicate curved wave line contours */}
+        <path
+          d="M 520 0 C 660 210, 890 320, 1140 450 C 1280 520, 1380 620, 1440 760"
+          stroke="#722F37"
+          strokeOpacity="0.22"
+          strokeWidth="1.5"
+          fill="none"
+        />
+
+        <path
+          d="M 640 0 C 780 240, 1020 370, 1260 510 C 1360 570, 1410 630, 1440 720"
+          stroke="#722F37"
+          strokeOpacity="0.14"
+          strokeWidth="1.2"
+          fill="none"
+        />
+
+        <path
+          d="M 420 0 C 580 260, 820 400, 1080 540 C 1240 630, 1370 750, 1440 880"
+          stroke="#B7A89A"
+          strokeOpacity="0.4"
+          strokeWidth="1.8"
+          strokeDasharray="5 5"
+          fill="none"
+        />
+
+        {/* Concentric curved wave rings */}
+        <circle
+          cx="1280"
+          cy="460"
+          r="480"
+          stroke="#722F37"
+          strokeOpacity="0.12"
+          strokeWidth="1.2"
+          fill="none"
+        />
+        <circle
+          cx="1280"
+          cy="460"
+          r="720"
+          stroke="#B7A89A"
+          strokeOpacity="0.22"
+          strokeWidth="1.5"
+          fill="none"
+        />
+
         {/* Minimal texture overlay */}
         <rect width="100%" height="100%" filter="url(#mocha-texture)" opacity="0.6" />
       </svg>
 
-      {/* Minimal Layered Bottom Waves: Mocha Cream, Cosmic Latte & Deep Burgundy (Sleek & Low-Profile) */}
-      <div className="absolute bottom-0 left-0 right-0 w-full h-[60px] sm:h-[80px] lg:h-[100px] pointer-events-none select-none z-10">
+      {/* Layered Flowing Bottom Waves: Mocha Cream, Cosmic Latte & Deep Burgundy */}
+      <div className="absolute bottom-0 left-0 right-0 w-full h-[120px] sm:h-[155px] lg:h-[190px] pointer-events-none select-none z-10">
         <svg
           className="w-full h-full"
-          viewBox="0 0 1440 100"
+          viewBox="0 0 1440 220"
           preserveAspectRatio="none"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -214,23 +241,23 @@ export function MochaWaveBackground() {
 
           {/* 1. Upper Wave Ribbon: Mocha Cream (#E8DCC6) */}
           <path
-            d="M 0 25 C 260 30, 500 65, 720 65 C 940 65, 1180 25, 1440 20 L 1440 100 L 0 100 Z"
+            d="M 0 45 C 260 65, 500 115, 720 115 C 940 115, 1180 60, 1440 40 L 1440 220 L 0 220 Z"
             fill="url(#bottom-mocha-grad)"
-            style={{ filter: 'drop-shadow(0 -2px 6px rgba(114, 47, 55, 0.06))' }}
+            style={{ filter: 'drop-shadow(0 -3px 8px rgba(114, 47, 55, 0.08))' }}
           />
 
           {/* 2. Middle Wave Ribbon: Cosmic Latte (#B7A89A) */}
           <path
-            d="M 0 42 C 280 48, 510 78, 720 78 C 930 78, 1160 42, 1440 38 L 1440 100 L 0 100 Z"
+            d="M 0 75 C 280 90, 510 140, 720 140 C 930 140, 1160 85, 1440 70 L 1440 220 L 0 220 Z"
             fill="url(#bottom-latte-grad)"
-            style={{ filter: 'drop-shadow(0 -3px 8px rgba(114, 47, 55, 0.1))' }}
+            style={{ filter: 'drop-shadow(0 -4px 10px rgba(114, 47, 55, 0.12))' }}
           />
 
           {/* 3. Bottom Foundation Wave: Deep Burgundy (#722F37) */}
           <path
-            d="M 0 58 C 300 65, 520 88, 720 88 C 920 88, 1140 60, 1440 54 L 1440 100 L 0 100 Z"
+            d="M 0 110 C 300 125, 520 165, 720 165 C 920 165, 1140 115, 1440 100 L 1440 220 L 0 220 Z"
             fill="url(#bottom-burgundy-grad)"
-            style={{ filter: 'drop-shadow(0 -4px 10px rgba(78, 20, 27, 0.2))' }}
+            style={{ filter: 'drop-shadow(0 -5px 14px rgba(78, 20, 27, 0.25))' }}
           />
         </svg>
       </div>

@@ -1,21 +1,42 @@
 import { Outlet, Link } from 'react-router-dom';
 import { ShieldCheck, Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MochaWaveBackground } from '@/features/landing/components/MochaWaveBackground';
 
 export function PublicLayout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col text-foreground relative selection:bg-burgundy/20 selection:text-burgundy bg-mocha-surface">
       {/* Background canvas covering the entire viewport seamlessly from top:0 behind all elements */}
       <MochaWaveBackground />
 
-      {/* Top Navbar — Pure floating tabs over continuous canvas, ZERO white layer */}
-      <header className="relative z-40 w-full bg-transparent border-0 outline-none shadow-none">
+      {/* Top Navbar — Sticky Navigation with Frosted Mocha-Cream Backdrop on Scroll */}
+      <header
+        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+          isScrolled
+            ? 'bg-[#FAF4EA]/90 backdrop-blur-md border-b border-[#B7A89A]/40 shadow-xs'
+            : 'bg-transparent border-b border-transparent shadow-none'
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 h-20 relative flex items-center justify-between">
-          {/* Subtle mobile brand icon on left */}
-          <Link to="/" className="md:hidden flex items-center gap-2">
+          {/* Brand icon on left (always visible on mobile, smoothly appears when scrolled on desktop) */}
+          <Link
+            to="/"
+            className={`flex items-center gap-2 transition-opacity duration-300 ${
+              isScrolled ? 'opacity-100' : 'opacity-100 md:opacity-0 md:pointer-events-none'
+            }`}
+          >
             <span className="font-cinzel font-black text-xl tracking-wider text-burgundy">SAMRIDD</span>
           </Link>
 
@@ -63,7 +84,7 @@ export function PublicLayout() {
 
         {/* Mobile dropdown — Mocha Cream background with Cosmic Latte borders */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-mocha-surface border-b-2 border-latte px-6 py-4 space-y-3 font-serif shadow-lg">
+          <div className="md:hidden bg-[#FAF4EA] border-b-2 border-latte px-6 py-4 space-y-3 font-serif shadow-lg">
             <a
               href="#explore"
               onClick={() => setMobileMenuOpen(false)}

@@ -16,7 +16,7 @@ export default function LandingPage() {
   return (
     <div className="relative min-h-[calc(100vh-5rem)] flex flex-col justify-between">
       {/* Hero Section — Logo on Left, Headings on Right, Centered Get Started Button & Bottom Quote */}
-      <section className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-6 pb-8 sm:pt-10 sm:pb-12 w-full flex-1 flex flex-col justify-center">
+      <section className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-6 pb-12 sm:pt-8 sm:pb-16 w-full flex-1 flex flex-col justify-center">
         {/* Two-Column Grid: Left = Logo & Plan Track Grow, Right = Headings & Description */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Column: SAMRIDD Logo + PLAN • TRACK • GROW in bold burgundy */}

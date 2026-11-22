@@ -26,6 +26,19 @@ export function SamriddLogo({ size = 'lg', className = '', align = 'center' }: S
               aria-hidden="true"
             >
               <defs>
+                {/* Arc Shadow Filter: subtle Deep Burgundy and warm mocha depth */}
+                <filter id="circle-arc-shadow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="5" floodColor="#722F37" floodOpacity="0.22" />
+                  <feDropShadow dx="0" dy="1.5" stdDeviation="2" floodColor="#5E4B3E" floodOpacity="0.18" />
+                </filter>
+
+                {/* Ambient Ground Shadow under the Circle Base */}
+                <radialGradient id="circle-floor-shadow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#722F37" stopOpacity="0.24" />
+                  <stop offset="45%" stopColor="#5E4B3E" stopOpacity="0.12" />
+                  <stop offset="100%" stopColor="#B7A89A" stopOpacity="0" />
+                </radialGradient>
+
                 {/* Soft Mocha Disc Interior Fill */}
                 <radialGradient id="mocha-disc-glow" cx="50%" cy="50%" r="50%">
                   <stop offset="0%" stopColor="#E8DCC6" stopOpacity="0.55" />
@@ -36,11 +49,11 @@ export function SamriddLogo({ size = 'lg', className = '', align = 'center' }: S
 
                 {/* Delicate Mocha-Gold Embossed Ring */}
                 <linearGradient id="mocha-ring-gradient" x1="15%" y1="90%" x2="85%" y2="10%">
-                  <stop offset="0%" stopColor="#B7A89A" stopOpacity="0.35" />
-                  <stop offset="35%" stopColor="#E8DCC6" stopOpacity="0.65" />
-                  <stop offset="70%" stopColor="#F5EDE0" stopOpacity="0.9" />
+                  <stop offset="0%" stopColor="#B7A89A" stopOpacity="0.4" />
+                  <stop offset="35%" stopColor="#E8DCC6" stopOpacity="0.75" />
+                  <stop offset="70%" stopColor="#F5EDE0" stopOpacity="0.95" />
                   <stop offset="82%" stopColor="#FFF9EE" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#B7A89A" stopOpacity="0.45" />
+                  <stop offset="100%" stopColor="#B7A89A" stopOpacity="0.5" />
                 </linearGradient>
 
                 {/* Star Ambient Corona Glow */}
@@ -60,19 +73,30 @@ export function SamriddLogo({ size = 'lg', className = '', align = 'center' }: S
                 </linearGradient>
               </defs>
 
-              {/* 1. Soft 3/4 Moon Mocha Fill (Fades out gently at the bottom) */}
+              {/* 1. Soft Ambient Ground Shadow under the Circle Base */}
+              <ellipse
+                cx="200"
+                cy="326"
+                rx="125"
+                ry="12"
+                fill="url(#circle-floor-shadow)"
+                style={{ filter: 'blur(4px)' }}
+              />
+
+              {/* 2. Soft 3/4 Moon Mocha Fill (Fades out gently at the bottom) */}
               <path
                 d="M 85.5 314.5 A 162 162 0 1 1 314.5 314.5 C 270 270, 130 270, 85.5 314.5 Z"
                 fill="url(#mocha-disc-glow)"
               />
 
-              {/* 2. Delicate 3/4 Moon Golden-Mocha Arc (270° sweep, open at bottom) */}
+              {/* 3. Thicker 3/4 Moon Golden-Mocha Arc with Shadow (270° sweep, open at bottom) */}
               <path
                 d="M 85.5 314.5 A 162 162 0 1 1 314.5 314.5"
                 fill="none"
                 stroke="url(#mocha-ring-gradient)"
-                strokeWidth="2.5"
+                strokeWidth="3.8"
                 strokeLinecap="round"
+                filter="url(#circle-arc-shadow)"
               />
 
               {/* 3. Star Flare at (314.5, 85.5) on the circle arc (approx 45° angle) */}
