@@ -16,43 +16,60 @@ import {
 export default function LandingPage() {
   return (
     <div className="relative min-h-[calc(100vh-5rem)] flex flex-col justify-between">
-      {/* Wave Background with Pure CSS/SVG Creamy & Mocha Texture (Zero external images) */}
+      {/* Wave Background with Warm Ivory-to-Champagne Gradient & Subtle Burgundy Undertones (Zero external images) */}
       <MochaWaveBackground />
 
-      {/* Hero Section — Styled matching the user reference layout */}
-      <section className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-8 pb-16 sm:pt-14 sm:pb-24 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left Hero Content */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left">
-            {/* The Lotus & SAMRIDD Logo Header */}
-            <SamriddLogo size="lg" className="mb-8 sm:mb-10" />
+      {/* Hero Section — Logo on Left, Headings on Right, Centered Get Started Button & Bottom Quote */}
+      <section className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-8 pb-16 sm:pt-14 sm:pb-20 w-full flex-1 flex flex-col justify-center">
+        {/* Two-Column Grid: Left = Logo & Plan Track Grow, Right = Headings & Description */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Left Column: SAMRIDD Logo + PLAN • TRACK • GROW in burgundy */}
+          <div className="lg:col-span-5 flex flex-col items-center text-center">
+            <SamriddLogo size="lg" align="center" />
+          </div>
 
+          {/* Right Column: Take Control of Your Finances + Description */}
+          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-[4.25rem] font-serif font-bold text-burgundy tracking-tight leading-[1.12]">
-              Take Control<br />
-              of Your Finances
+            <h1 className="text-4xl sm:text-6xl lg:text-[4.25rem] font-serif font-bold tracking-tight leading-[1.12]">
+              <span className="text-[#141110] block">Take Control of</span>
+              <span className="text-[#141110]">Your </span>
+              <span className="text-burgundy italic font-serif">Finances</span>
             </h1>
 
-            {/* Subtitle / Description */}
-            <p className="mt-6 text-lg sm:text-xl font-serif italic text-burgundy/90 max-w-xl leading-relaxed">
+            {/* Delicate curved arc underline under "Your Finances" matching reference image */}
+            <svg
+              className="w-48 sm:w-64 h-3 sm:h-4 text-burgundy/40 mt-1"
+              viewBox="0 0 240 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M 4 12 C 70 3, 170 3, 236 12"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+            </svg>
+
+            {/* Subtitle / Description in normal black color */}
+            <p className="mt-6 text-base sm:text-lg lg:text-xl font-serif text-[#141110]/85 max-w-xl leading-relaxed">
               Track your income, manage expenses, master your budgets,<br className="hidden sm:inline" />
               plan life&apos;s biggest moments, and achieve your financial goals.
             </p>
-
-            {/* Get Started Pill Button */}
-            <Link
-              to="/signup"
-              className="mt-8 inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-burgundy text-white font-serif font-semibold text-base shadow-xl hover:bg-burgundy-hover hover:shadow-2xl transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 group"
-            >
-              <span>Get Started</span>
-              <span className="text-xl leading-none transition-transform group-hover:translate-x-1">&rarr;</span>
-            </Link>
           </div>
+        </div>
 
-          {/* Right Column: Visual breathing space for the luminous wave curves */}
-          <div className="hidden lg:block lg:col-span-5 min-h-[460px] pointer-events-none">
-            {/* Organic waves on right gracefully frame this space */}
-          </div>
+        {/* Centrally Aligned Down the Contents: Get Started Button */}
+        <div className="mt-12 sm:mt-16 flex justify-center items-center w-full">
+          <Link
+            to="/signup"
+            className="inline-flex items-center gap-3 px-9 py-3.5 sm:px-10 sm:py-4 rounded-full bg-burgundy text-[#E8DCC6] font-serif font-semibold text-base sm:text-lg shadow-xl hover:bg-burgundy-hover hover:shadow-2xl transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 group"
+          >
+            <span>Get Started</span>
+            <span className="text-xl leading-none transition-transform group-hover:translate-x-1">&rarr;</span>
+          </Link>
         </div>
 
         {/* Bottom Tagline Divider */}

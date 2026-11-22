@@ -5,11 +5,31 @@ export function MochaWaveBackground() {
     <div
       className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0"
       style={{
-        background: 'radial-gradient(ellipse 90% 80% at 20% 25%, #FAF5EE 0%, #F5EAE0 45%, #EEDDCF 75%, #E4CFBE 100%)',
+        background: 'radial-gradient(ellipse 95% 85% at 30% 25%, #FAF6EE 0%, #F5ECE0 45%, #EFE3D4 75%, #E6D4C2 100%)',
       }}
       aria-hidden="true"
     >
-      {/* SVG Waves & Curved Contours (Replicating reference geometry without pictures) */}
+      {/* Soft Ambient Lighting with subtle burgundy undertones and warm ivory-to-champagne glow */}
+      <div
+        className="absolute -top-32 -right-32 w-[65vw] h-[65vw] max-w-[850px] max-h-[850px] rounded-full blur-3xl opacity-60 pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle, rgba(114, 47, 55, 0.08) 0%, rgba(114, 47, 55, 0.02) 45%, transparent 70%)',
+        }}
+      />
+      <div
+        className="absolute top-1/4 left-1/4 w-[75vw] h-[75vw] max-w-[950px] max-h-[950px] rounded-full blur-2xl opacity-70 pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(245, 236, 224, 0.25) 50%, transparent 80%)',
+        }}
+      />
+      <div
+        className="absolute -bottom-24 -left-24 w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] rounded-full blur-3xl opacity-50 pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle, rgba(114, 47, 55, 0.05) 0%, rgba(232, 220, 198, 0.3) 50%, transparent 75%)',
+        }}
+      />
+
+      {/* Delicate Curved Accents — NO lines (pure subtle gradient curved contours) */}
       <svg
         className="absolute inset-0 w-full h-full"
         viewBox="0 0 1440 900"
@@ -18,108 +38,61 @@ export function MochaWaveBackground() {
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
-          {/* Subtle paper/creamy texture via SVG filter */}
+          {/* Subtle paper/creamy micro-texture via SVG filter */}
           <filter id="mocha-texture" x="0%" y="0%" width="100%" height="100%">
-            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" result="noise" />
+            <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" result="noise" />
             <feColorMatrix
               type="matrix"
-              values="0 0 0 0 0.45   0 0 0 0 0.35   0 0 0 0 0.28  0 0 0 0.04 0"
+              values="0 0 0 0 0.45   0 0 0 0 0.35   0 0 0 0 0.28  0 0 0 0.025 0"
             />
             <feBlend mode="multiply" in="SourceGraphic" result="blend" />
           </filter>
 
-          {/* Radial glow on the right wave */}
-          <radialGradient id="wave-glow" cx="80%" cy="45%" r="65%" fx="75%" fy="40%">
-            <stop offset="0%" stopColor="#DFC8B3" stopOpacity="0.8" />
-            <stop offset="35%" stopColor="#E9D6C4" stopOpacity="0.5" />
-            <stop offset="70%" stopColor="#F5E9DD" stopOpacity="0.2" />
-            <stop offset="100%" stopColor="#FAF5EE" stopOpacity="0" />
+          {/* Soft champagne orb fill */}
+          <radialGradient id="ambient-orb" cx="80%" cy="45%" r="65%" fx="75%" fy="40%">
+            <stop offset="0%" stopColor="#E2CDBA" stopOpacity="0.45" />
+            <stop offset="40%" stopColor="#ECDCCB" stopOpacity="0.25" />
+            <stop offset="80%" stopColor="#F5ECE0" stopOpacity="0.1" />
+            <stop offset="100%" stopColor="#FAF6EE" stopOpacity="0" />
           </radialGradient>
 
-          {/* Sweeping crescent linear gradient */}
-          <linearGradient id="crescent-grad" x1="45%" y1="0%" x2="95%" y2="85%">
-            <stop offset="0%" stopColor="#EEDAC8" stopOpacity="0.75" />
-            <stop offset="40%" stopColor="#E5CDB8" stopOpacity="0.6" />
-            <stop offset="80%" stopColor="#D9BEA6" stopOpacity="0.45" />
-            <stop offset="100%" stopColor="#E2CCA8" stopOpacity="0.2" />
+          {/* Sweeping crescent curved accent */}
+          <linearGradient id="crescent-accent" x1="40%" y1="0%" x2="95%" y2="85%">
+            <stop offset="0%" stopColor="#EED9C7" stopOpacity="0.5" />
+            <stop offset="50%" stopColor="#E5CDBC" stopOpacity="0.35" />
+            <stop offset="100%" stopColor="#D8BEA7" stopOpacity="0.15" />
           </linearGradient>
 
-          {/* Bottom curve gradient */}
-          <linearGradient id="bottom-wave" x1="20%" y1="100%" x2="100%" y2="80%">
-            <stop offset="0%" stopColor="#FAF5EE" stopOpacity="0" />
-            <stop offset="50%" stopColor="#E7D1BD" stopOpacity="0.5" />
-            <stop offset="100%" stopColor="#DCBEA5" stopOpacity="0.7" />
+          {/* Bottom horizon gentle curve */}
+          <linearGradient id="bottom-accent" x1="20%" y1="100%" x2="100%" y2="80%">
+            <stop offset="0%" stopColor="#FAF6EE" stopOpacity="0" />
+            <stop offset="50%" stopColor="#E7D2BF" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="#DDBEA6" stopOpacity="0.45" />
           </linearGradient>
         </defs>
 
-        {/* Large sweeping crescent wave shape on right */}
+        {/* Sweeping crescent wave fill (No stroked lines) */}
         <path
-          d="M 720 0 C 860 160, 1050 250, 1240 380 C 1360 460, 1420 560, 1440 680 L 1440 0 Z"
-          fill="url(#crescent-grad)"
+          d="M 720 0 C 860 160, 1060 250, 1250 380 C 1370 460, 1420 560, 1440 680 L 1440 0 Z"
+          fill="url(#crescent-accent)"
         />
 
-        {/* Massive organic circular wave center */}
+        {/* Organic ambient circle fill on right (No stroked lines) */}
         <circle
           cx="1280"
           cy="460"
           r="620"
-          fill="url(#wave-glow)"
+          fill="url(#ambient-orb)"
         />
 
-        {/* Delicate curved line contours matching the reference image */}
-        <path
-          d="M 520 0 C 660 210, 890 320, 1140 450 C 1280 520, 1380 620, 1440 760"
-          stroke="#722F37"
-          strokeOpacity="0.16"
-          strokeWidth="1.2"
-          fill="none"
-        />
-
-        <path
-          d="M 640 0 C 780 240, 1020 370, 1260 510 C 1360 570, 1410 630, 1440 720"
-          stroke="#722F37"
-          strokeOpacity="0.10"
-          strokeWidth="1"
-          fill="none"
-        />
-
-        <path
-          d="M 420 0 C 580 260, 820 400, 1080 540 C 1240 630, 1370 750, 1440 880"
-          stroke="#B7A89A"
-          strokeOpacity="0.35"
-          strokeWidth="1.5"
-          strokeDasharray="4 4"
-          fill="none"
-        />
-
-        {/* Concentric curved wave rings */}
-        <circle
-          cx="1280"
-          cy="460"
-          r="480"
-          stroke="#722F37"
-          strokeOpacity="0.08"
-          strokeWidth="1"
-          fill="none"
-        />
-        <circle
-          cx="1280"
-          cy="460"
-          r="720"
-          stroke="#B7A89A"
-          strokeOpacity="0.18"
-          strokeWidth="1.2"
-          fill="none"
-        />
-
-        {/* Soft bottom wave rise */}
+        {/* Soft bottom rise fill (No stroked lines) */}
         <path
           d="M 280 900 C 520 840, 840 810, 1150 850 C 1290 870, 1380 890, 1440 900 Z"
-          fill="url(#bottom-wave)"
+          fill="url(#bottom-accent)"
         />
 
-        {/* Overlay texture filter */}
-        <rect width="100%" height="100%" filter="url(#mocha-texture)" opacity="0.6" />
+        {/* Minimal texture overlay */}
+        <rect width="100%" height="100%" filter="url(#mocha-texture)" opacity="0.5" />
       </svg>
     </div>
   );

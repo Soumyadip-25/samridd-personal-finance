@@ -9,38 +9,38 @@ export function PublicLayout() {
 
   return (
     <div className="min-h-screen flex flex-col text-foreground relative selection:bg-burgundy/20 selection:text-burgundy">
-      {/* Top Navbar — Flowing and translucent over creamy mocha canvas */}
-      <header className="sticky top-0 z-40 w-full backdrop-blur-xs transition-colors">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 h-20 flex items-center justify-between">
-          {/* Subtle mobile brand icon */}
+      {/* Top Navbar — No white background, Burgundy centered tabs equally distanced, Sign In top right */}
+      <header className="sticky top-0 z-40 w-full bg-transparent backdrop-blur-xs transition-colors">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 h-20 relative flex items-center justify-between">
+          {/* Subtle mobile brand icon on left */}
           <Link to="/" className="md:hidden flex items-center gap-2">
             <span className="font-cinzel font-black text-xl tracking-wider text-burgundy">SAMRIDD</span>
           </Link>
 
-          {/* Center-Right Navigation Links per reference image: Explore · How It Works · About Us */}
-          <nav className="hidden md:flex items-center gap-10 font-serif text-base font-medium text-burgundy/90 ml-auto mr-8">
+          {/* Centrally Aligned Navigation Tabs (Equally Distanced & Burgundy) */}
+          <nav className="hidden md:flex items-center justify-center gap-12 lg:gap-16 font-serif text-base lg:text-lg font-medium text-burgundy absolute left-1/2 -translate-x-1/2">
             <a
               href="#explore"
-              className="hover:text-burgundy hover:underline underline-offset-8 transition-colors"
+              className="text-burgundy hover:text-burgundy-hover transition-colors"
             >
               Explore
             </a>
             <a
               href="#how-it-works"
-              className="hover:text-burgundy hover:underline underline-offset-8 transition-colors"
+              className="text-burgundy hover:text-burgundy-hover transition-colors"
             >
               How It Works
             </a>
             <a
               href="#about"
-              className="hover:text-burgundy hover:underline underline-offset-8 transition-colors"
+              className="text-burgundy hover:text-burgundy-hover transition-colors"
             >
               About Us
             </a>
           </nav>
 
-          {/* Right Action: Sign In pill button + Theme toggle */}
-          <div className="flex items-center gap-4">
+          {/* Right Action: Sign In pill button with Burgundy background & Cream text + Theme Toggle */}
+          <div className="flex items-center gap-4 ml-auto">
             <button
               onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
               className="p-2 rounded-full text-burgundy/70 hover:text-burgundy hover:bg-burgundy/10 transition-colors"
@@ -52,7 +52,7 @@ export function PublicLayout() {
 
             <Link
               to="/login"
-              className="px-7 py-2.5 rounded-full bg-burgundy text-white font-serif font-medium text-sm sm:text-base hover:bg-burgundy-hover shadow-md hover:shadow-lg transition-all duration-200"
+              className="px-7 py-2.5 rounded-full bg-burgundy text-[#E8DCC6] font-serif font-medium text-sm sm:text-base hover:bg-burgundy-hover hover:text-[#FAF5EE] shadow-md hover:shadow-lg transition-all duration-200"
             >
               Sign In
             </Link>
@@ -68,27 +68,27 @@ export function PublicLayout() {
           </div>
         </div>
 
-        {/* Mobile dropdown */}
+        {/* Mobile dropdown — Warm mocha background, no white */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-mocha-surface/95 border-b border-latte px-6 py-4 space-y-3 font-serif">
+          <div className="md:hidden bg-mocha-surface/98 border-b border-latte/60 px-6 py-4 space-y-3 font-serif">
             <a
               href="#explore"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-burgundy font-medium"
+              className="block py-2 text-burgundy font-medium text-base"
             >
               Explore
             </a>
             <a
               href="#how-it-works"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-burgundy font-medium"
+              className="block py-2 text-burgundy font-medium text-base"
             >
               How It Works
             </a>
             <a
               href="#about"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-2 text-burgundy font-medium"
+              className="block py-2 text-burgundy font-medium text-base"
             >
               About Us
             </a>
@@ -102,7 +102,7 @@ export function PublicLayout() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-latte/40 py-12 text-sm text-espresso-muted z-10 backdrop-blur-xs">
+      <footer className="border-t border-latte/40 py-12 text-sm text-espresso-muted z-10 bg-transparent backdrop-blur-xs">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <span className="font-cinzel font-bold text-burgundy text-base tracking-wider">SAMRIDD</span>
