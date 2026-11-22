@@ -17,7 +17,7 @@ export function SamriddLogo({ size = 'lg', className = '', align = 'center' }: S
       {/* Logo Container with Elegance Circle & Golden Star Flare */}
       <div className="relative group flex items-center justify-center">
         {isLarge && (
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[52%] w-[290px] h-[290px] sm:w-[370px] sm:h-[370px] lg:w-[420px] lg:h-[420px] pointer-events-none select-none z-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[52%] w-[270px] h-[270px] sm:w-[330px] sm:h-[330px] lg:w-[370px] lg:h-[370px] pointer-events-none select-none z-0">
             <svg
               className="w-full h-full overflow-visible"
               viewBox="0 0 400 400"
@@ -73,25 +73,25 @@ export function SamriddLogo({ size = 'lg', className = '', align = 'center' }: S
                 </linearGradient>
               </defs>
 
-              {/* 1. Soft Ambient Ground Shadow under the Circle Base */}
+              {/* 1. Soft Ambient Ground Shadow under the 2.5/4 Moon Base */}
               <ellipse
                 cx="200"
-                cy="326"
-                rx="125"
+                cy="275"
+                rx="145"
                 ry="12"
                 fill="url(#circle-floor-shadow)"
-                style={{ filter: 'blur(4px)' }}
+                style={{ filter: 'blur(5px)' }}
               />
 
-              {/* 2. Soft 3/4 Moon Mocha Fill (Fades out gently at the bottom) */}
+              {/* 2. Soft 2.5/4 Moon Mocha Fill (Fades out gently at the bottom) */}
               <path
-                d="M 85.5 314.5 A 162 162 0 1 1 314.5 314.5 C 270 270, 130 270, 85.5 314.5 Z"
+                d="M 50.3 262 A 162 162 0 1 1 349.7 262 C 300 235, 100 235, 50.3 262 Z"
                 fill="url(#mocha-disc-glow)"
               />
 
-              {/* 3. Thicker 3/4 Moon Golden-Mocha Arc with Shadow (270° sweep, open at bottom) */}
+              {/* 3. Thicker 2.5/4 Moon Golden-Mocha Arc with Shadow (225° sweep, open at bottom) */}
               <path
-                d="M 85.5 314.5 A 162 162 0 1 1 314.5 314.5"
+                d="M 50.3 262 A 162 162 0 1 1 349.7 262"
                 fill="none"
                 stroke="url(#mocha-ring-gradient)"
                 strokeWidth="3.8"
@@ -124,7 +124,7 @@ export function SamriddLogo({ size = 'lg', className = '', align = 'center' }: S
           alt="SAMRIDD — Lotus Logo"
           className={`${
             isLarge
-              ? 'h-36 sm:h-48'
+              ? 'h-32 sm:h-42'
               : isSmall
               ? 'h-10'
               : 'h-20 sm:h-28'
@@ -133,7 +133,7 @@ export function SamriddLogo({ size = 'lg', className = '', align = 'center' }: S
       </div>
 
       {/* Tagline: ✦ PLAN • TRACK • GROW ✦ in Bold Dark Burgundy */}
-      <div className={`flex items-center gap-3 font-cinzel font-bold tracking-[0.28em] text-burgundy uppercase mt-4 relative z-10 ${
+      <div className={`flex items-center gap-3 font-cinzel font-bold tracking-[0.28em] text-burgundy uppercase mt-3.5 relative z-10 ${
         isLarge ? 'text-xs sm:text-sm' : isSmall ? 'text-[9px] tracking-widest' : 'text-[11px]'
       }`}>
         <span className="w-8 sm:w-12 h-[2px] bg-burgundy"></span>
@@ -143,7 +143,7 @@ export function SamriddLogo({ size = 'lg', className = '', align = 'center' }: S
 
       {/* Luxury Credential */}
       {isLarge && (
-        <div className="mt-3 text-[11px] font-cinzel tracking-[0.22em] text-espresso-muted uppercase font-bold relative z-10">
+        <div className="mt-2 text-[11px] font-cinzel tracking-[0.22em] text-espresso-muted uppercase font-bold relative z-10">
           ✦ Sovereign Indian Personal Finance ✦
         </div>
       )}

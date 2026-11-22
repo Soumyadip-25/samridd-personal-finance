@@ -14,127 +14,174 @@ import {
 
 export default function LandingPage() {
   return (
-    <div className="relative min-h-[calc(100vh-5rem)] flex flex-col justify-between">
-      {/* Hero Section — Logo on Left, Headings on Right, Centered Get Started Button & Bottom Quote */}
-      <section className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-6 pb-12 sm:pt-8 sm:pb-16 w-full flex-1 flex flex-col justify-center">
-        {/* Two-Column Grid: Left = Logo & Plan Track Grow, Right = Headings & Description */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: SAMRIDD Logo + PLAN • TRACK • GROW in bold burgundy */}
-          <div className="lg:col-span-5 flex flex-col items-center text-center">
-            <SamriddLogo size="lg" align="center" />
-          </div>
+    <div className="relative w-full">
+      {/* 1. Hero Section — Full Viewport Screen (§1.4) */}
+      <section className="relative min-h-[calc(100vh-5rem)] lg:h-[calc(100vh-5rem)] flex flex-col justify-between overflow-hidden">
+        {/* Main Content Area */}
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-5 sm:pt-8 lg:pt-9 pb-0 w-full flex-1 flex flex-col justify-between relative z-10">
+          {/* Upper Hero Content: Balanced vertically */}
+          <div className="my-auto flex flex-col items-center w-full">
+            {/* Two-Column Grid: Left = Logo & Plan Track Grow, Right = Headings & Description */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center w-full">
+              {/* Left Column: SAMRIDD Logo + PLAN • TRACK • GROW in bold burgundy */}
+              <div className="lg:col-span-5 flex flex-col items-center text-center">
+                <SamriddLogo size="lg" align="center" />
+              </div>
 
-          {/* Right Column: Take Control of Your Finances + Description + Quote */}
-          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
-            {/* Main Headline with high-contrast obsidian black & deep burgundy */}
-            <h1 className="text-4xl sm:text-6xl lg:text-[4.5rem] font-serif font-black tracking-tight leading-[1.12]">
-              <span className="text-[#100C0B] block">Take Control of</span>
-              <span className="text-[#100C0B]">Your </span>
-              <span className="relative inline-block text-burgundy italic font-serif font-black">
-                Finances
-                {/* Wavy curved underline only under "Finances" in Cosmic Latte / Mocha */}
-                <svg
-                  className="absolute -bottom-1.5 sm:-bottom-2.5 left-0 w-full h-3 sm:h-4 text-[#B7A89A] pointer-events-none"
-                  viewBox="0 0 160 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  preserveAspectRatio="none"
-                >
-                  <path
-                    d="M 3 11 C 45 3, 115 3, 157 11"
-                    stroke="currentColor"
-                    strokeWidth="3.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>
-            </h1>
+              {/* Right Column: Take Control of Your Finances + Description + Quote */}
+              <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
+                {/* Main Headline with high-contrast obsidian black & deep burgundy */}
+                <h1 className="text-4xl sm:text-5xl lg:text-[4rem] font-serif font-black tracking-tight leading-[1.12]">
+                  <span className="text-[#100C0B] block">Take Control of</span>
+                  <span className="text-[#100C0B]">Your </span>
+                  <span className="relative inline-block text-burgundy italic font-serif font-black">
+                    Finances
+                    {/* Wavy curved underline only under "Finances" in Cosmic Latte / Mocha */}
+                    <svg
+                      className="absolute -bottom-1.5 sm:-bottom-2.5 left-0 w-full h-3 sm:h-4 text-[#B7A89A] pointer-events-none"
+                      viewBox="0 0 160 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      preserveAspectRatio="none"
+                    >
+                      <path
+                        d="M 3 11 C 45 3, 115 3, 157 11"
+                        stroke="currentColor"
+                        strokeWidth="3.5"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </span>
+                </h1>
 
-            {/* Subtitle / Description & Quote Container */}
-            <div className="mt-6 max-w-xl w-full">
-              <p className="text-base sm:text-lg lg:text-xl font-serif text-[#100C0B] leading-relaxed font-medium">
-                Track your income, manage expenses, master your budgets,<br className="hidden sm:inline" />
-                plan life&apos;s biggest moments, and achieve your financial goals.
-              </p>
+                {/* Subtitle / Description & Quote Container */}
+                <div className="mt-4 sm:mt-5 max-w-xl w-full">
+                  <p className="text-base sm:text-lg lg:text-xl font-serif text-[#100C0B] leading-relaxed font-medium">
+                    Track your income, manage expenses, master your budgets,<br className="hidden sm:inline" />
+                    plan life&apos;s biggest moments, and achieve your financial goals.
+                  </p>
 
-              {/* Quote Line on the right side of the writing */}
-              <div className="flex justify-end mt-3">
-                <p className="text-xl sm:text-2xl lg:text-[1.75rem] font-serif italic text-burgundy font-bold tracking-wide text-right">
-                  ~ all in one place
-                </p>
+                  {/* Quote Line on the right side of the writing */}
+                  <div className="flex justify-end mt-2">
+                    <p className="text-xl sm:text-2xl lg:text-[1.75rem] font-serif italic text-burgundy font-bold tracking-wide text-right">
+                      ~ all in one place
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Centrally Aligned Down the Contents: Refined Sleek Get Started Button */}
+            <div className="mt-5 sm:mt-6 flex flex-col items-center justify-center w-full gap-3 sm:gap-4">
+              <Link
+                to="/signup"
+                className="inline-flex items-center gap-2.5 px-8 py-2.5 sm:px-10 sm:py-3 rounded-full bg-burgundy text-[#E8DCC6] font-serif font-bold text-base sm:text-lg shadow-xl hover:bg-burgundy-hover hover:text-[#FAF5EE] hover:shadow-burgundy/30 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 group ring-1 ring-burgundy/30"
+              >
+                <span>Get Started</span>
+                <span className="text-xl leading-none transition-transform group-hover:translate-x-1">&rarr;</span>
+              </Link>
+
+              {/* Three Feature Badges matching user reference (media_1795377857927_81768710.png) */}
+              <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 lg:gap-8 pt-1">
+                {/* 1. Secure & Private */}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
+                    <ShieldCheck className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
+                  </div>
+                  <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
+                    Secure &amp; Private
+                  </span>
+                </div>
+
+                {/* Divider */}
+                <div className="hidden sm:block h-6 w-[1.5px] bg-[#B7A89A]/60" />
+
+                {/* 2. Multiple Profiles */}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
+                    <Layers className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
+                  </div>
+                  <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
+                    Multiple Profiles
+                  </span>
+                </div>
+
+                {/* Divider */}
+                <div className="hidden sm:block h-6 w-[1.5px] bg-[#B7A89A]/60" />
+
+                {/* 3. Insightful Reports */}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
+                    <BarChart3 className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
+                  </div>
+                  <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
+                    Insightful Reports
+                  </span>
+                </div>
               </div>
             </div>
           </div>
+
+          {/* Bottom Tagline Divider shifted to the bottom of the page right above the waves */}
+          <div className="mt-auto mb-2 sm:mb-2.5 flex items-center justify-center gap-3 sm:gap-4 text-burgundy font-serif italic font-semibold text-sm sm:text-base relative z-20">
+            <span className="w-12 sm:w-28 h-[1.5px] bg-burgundy/60"></span>
+            <span className="flex items-center gap-2">
+              <span className="text-xs">✦</span>
+              <span>Smarter choices. A more secure tomorrow.</span>
+              <span className="text-xs">✦</span>
+            </span>
+            <span className="w-12 sm:w-28 h-[1.5px] bg-burgundy/60"></span>
+          </div>
         </div>
 
-        {/* Centrally Aligned Down the Contents: Refined Sleek Get Started Button */}
-        <div className="mt-7 sm:mt-9 flex flex-col items-center justify-center w-full gap-4">
-          <Link
-            to="/signup"
-            className="inline-flex items-center gap-2.5 px-8 py-2.5 sm:px-10 sm:py-3 rounded-full bg-burgundy text-[#E8DCC6] font-serif font-bold text-base sm:text-lg shadow-xl hover:bg-burgundy-hover hover:text-[#FAF5EE] hover:shadow-burgundy/30 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 group ring-1 ring-burgundy/30"
+        {/* Minimal Breadth Flowing Waves anchored at base of Hero section */}
+        <div className="w-full h-[36px] sm:h-[44px] lg:h-[50px] pointer-events-none select-none relative z-10 -mb-px">
+          <svg
+            className="w-full h-full block"
+            viewBox="0 0 1440 100"
+            preserveAspectRatio="none"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <span>Get Started</span>
-            <span className="text-xl leading-none transition-transform group-hover:translate-x-1">&rarr;</span>
-          </Link>
+            <defs>
+              <linearGradient id="hero-latte-grad" x1="0%" y1="0%" x2="100%" y2="50%">
+                <stop offset="0%" stopColor="#CDBEAE" />
+                <stop offset="45%" stopColor="#B7A89A" />
+                <stop offset="80%" stopColor="#B7A89A" />
+                <stop offset="100%" stopColor="#C4B4A4" />
+              </linearGradient>
 
-          {/* Three Feature Badges matching user reference (media_1795377857927_81768710.png) */}
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 lg:gap-8 pt-2">
-            {/* 1. Secure & Private */}
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
-                <ShieldCheck className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
-              </div>
-              <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
-                Secure &amp; Private
-              </span>
-            </div>
+              <linearGradient id="hero-burgundy-grad" x1="0%" y1="0%" x2="100%" y2="40%">
+                <stop offset="0%" stopColor="#541922" />
+                <stop offset="30%" stopColor="#722F37" />
+                <stop offset="70%" stopColor="#722F37" />
+                <stop offset="100%" stopColor="#4E141B" />
+              </linearGradient>
+            </defs>
 
-            {/* Divider */}
-            <div className="hidden sm:block h-6 w-[1.5px] bg-[#B7A89A]/60" />
+            {/* 1. Upper Wave Ribbon: Cosmic Latte (#B7A89A) */}
+            <path
+              d="M 0 45 C 300 58, 530 75, 720 75 C 910 75, 1150 54, 1440 40 L 1440 100 L 0 100 Z"
+              fill="url(#hero-latte-grad)"
+              style={{ filter: 'drop-shadow(0 -3px 8px rgba(114, 47, 55, 0.12))' }}
+            />
 
-            {/* 2. Multiple Profiles */}
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
-                <Layers className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
-              </div>
-              <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
-                Multiple Profiles
-              </span>
-            </div>
-
-            {/* Divider */}
-            <div className="hidden sm:block h-6 w-[1.5px] bg-[#B7A89A]/60" />
-
-            {/* 3. Insightful Reports */}
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
-                <BarChart3 className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
-              </div>
-              <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
-                Insightful Reports
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Tagline Divider cleanly visible above the minimal waves */}
-        <div className="mt-6 sm:mt-8 flex items-center justify-center gap-3 sm:gap-4 text-burgundy font-serif italic font-semibold text-sm sm:text-base relative z-20">
-          <span className="w-12 sm:w-28 h-[1.5px] bg-burgundy/60"></span>
-          <span className="flex items-center gap-2">
-            <span className="text-xs">✦</span>
-            <span>Smarter choices. A more secure tomorrow.</span>
-            <span className="text-xs">✦</span>
-          </span>
-          <span className="w-12 sm:w-28 h-[1.5px] bg-burgundy/60"></span>
+            {/* 2. Bottom Foundation Wave: Deep Burgundy (#722F37) */}
+            <path
+              d="M 0 68 C 320 78, 520 90, 720 90 C 920 90, 1140 74, 1440 60 L 1440 100 L 0 100 Z"
+              fill="url(#hero-burgundy-grad)"
+              style={{ filter: 'drop-shadow(0 -4px 10px rgba(78, 20, 27, 0.22))' }}
+            />
+          </svg>
         </div>
       </section>
 
-      {/* Explore Section — High Glamour Bento Architecture */}
-      <section id="explore" className="relative z-10 py-24 px-6 sm:px-10 lg:px-16 border-t-2 border-latte/60 bg-[#FAF4EA]/80 backdrop-blur-xs">
+      {/* 2. Explore Section — High Glamour Bento Architecture */}
+      <section id="explore" className="relative z-10 pt-8 sm:pt-10 lg:pt-12 pb-16 sm:pb-20 lg:pb-24 px-6 sm:px-10 lg:px-16 bg-[#FAF4EA]/90 backdrop-blur-xs">
         <div className="max-w-7xl mx-auto">
           {/* Section Editorial Header */}
-          <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-burgundy/10 border-2 border-burgundy/25 text-burgundy font-cinzel font-bold text-xs uppercase tracking-[0.24em] mb-4 shadow-xs">
               <span>✦ The Architecture of Clarity ✦</span>
             </div>
@@ -147,7 +194,7 @@ export default function LandingPage() {
           </div>
 
           {/* Feature Bento Grid (7 Core Pillars Redesigned with High Glamour) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-7">
             {/* 1. Moments — Occasion & Milestone Planning (Span 7 cols) */}
             <div className="lg:col-span-7 p-7 sm:p-9 rounded-3xl border-2 border-[#B7A89A] hover:border-burgundy/80 bg-[#FCF8F2] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
               <div>
@@ -386,7 +433,7 @@ export default function LandingPage() {
           </div>
 
           {/* Grand Philosophy Centerpiece Banner */}
-          <div className="mt-20 rounded-3xl border-2 border-burgundy/40 bg-gradient-to-br from-[#FAF4EA] via-[#F5ECE0] to-[#EBDCC8] p-8 sm:p-14 text-center relative overflow-hidden shadow-xl">
+          <div className="mt-12 sm:mt-16 rounded-3xl border border-burgundy/30 bg-gradient-to-br from-[#FAF4EA] via-[#F5ECE0] to-[#EBDCC8] p-6 sm:p-12 text-center relative overflow-hidden shadow-lg">
             <div className="max-w-3xl mx-auto space-y-5">
               <span className="font-cinzel font-bold text-xs uppercase tracking-[0.26em] text-burgundy">
                 ✦ The SAMRIDD Philosophy ✦
@@ -410,18 +457,18 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section id="how-it-works" className="relative z-10 py-24 px-6 sm:px-10 lg:px-16 border-t-2 border-latte/60 bg-[#FAF4EA]/60">
+      {/* 3. How It Works Section */}
+      <section id="how-it-works" className="relative z-10 py-16 sm:py-20 lg:py-24 px-6 sm:px-10 lg:px-16 border-t border-[#B7A89A]/30 bg-[#FAF4EA]/60">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center max-w-xl mx-auto mb-16">
+          <div className="text-center max-w-xl mx-auto mb-10 sm:mb-12">
             <span className="font-cinzel font-bold text-xs uppercase tracking-[0.24em] text-burgundy">✦ Simple &amp; Intentional ✦</span>
             <h2 className="text-3xl sm:text-4xl font-serif font-black text-burgundy mt-2">
               Three steps to complete clarity
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-start p-8 rounded-3xl border-2 border-[#B7A89A] bg-[#FCF8F2] shadow-sm hover:shadow-md transition-all">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <div className="flex flex-col items-start p-7 sm:p-8 rounded-3xl border border-[#B7A89A]/60 bg-[#FCF8F2] shadow-xs hover:shadow-md transition-all">
               <span className="font-cinzel font-black text-4xl text-burgundy/40 mb-3">01</span>
               <h3 className="font-serif font-bold text-xl text-burgundy mb-2">Create Your Profile</h3>
               <p className="text-sm text-[#1E1715] leading-relaxed font-medium">
@@ -429,7 +476,7 @@ export default function LandingPage() {
               </p>
             </div>
 
-            <div className="flex flex-col items-start p-8 rounded-3xl border-2 border-[#B7A89A] bg-[#FCF8F2] shadow-sm hover:shadow-md transition-all">
+            <div className="flex flex-col items-start p-7 sm:p-8 rounded-3xl border border-[#B7A89A]/60 bg-[#FCF8F2] shadow-xs hover:shadow-md transition-all">
               <span className="font-cinzel font-black text-4xl text-burgundy/40 mb-3">02</span>
               <h3 className="font-serif font-bold text-xl text-burgundy mb-2">Record Transactions</h3>
               <p className="text-sm text-[#1E1715] leading-relaxed font-medium">
@@ -437,7 +484,7 @@ export default function LandingPage() {
               </p>
             </div>
 
-            <div className="flex flex-col items-start p-8 rounded-3xl border-2 border-[#B7A89A] bg-[#FCF8F2] shadow-sm hover:shadow-md transition-all">
+            <div className="flex flex-col items-start p-7 sm:p-8 rounded-3xl border border-[#B7A89A]/60 bg-[#FCF8F2] shadow-xs hover:shadow-md transition-all">
               <span className="font-cinzel font-black text-4xl text-burgundy/40 mb-3">03</span>
               <h3 className="font-serif font-bold text-xl text-burgundy mb-2">Plan &amp; Master Goals</h3>
               <p className="text-sm text-[#1E1715] leading-relaxed font-medium">
@@ -448,18 +495,18 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* About Us Section */}
-      <section id="about" className="relative z-10 py-24 px-6 sm:px-10 lg:px-16 border-t-2 border-latte/60 bg-[#FAF4EA]/90">
+      {/* 4. About Us Section */}
+      <section id="about" className="relative z-10 py-16 sm:py-20 lg:py-24 px-6 sm:px-10 lg:px-16 border-t border-[#B7A89A]/30 bg-[#FAF4EA]/90">
         <div className="max-w-4xl mx-auto text-center">
           <span className="font-cinzel font-bold text-xs uppercase tracking-[0.24em] text-burgundy">✦ The Philosophy ✦</span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-black text-burgundy mt-2 mb-6">
+          <h2 className="text-3xl sm:text-4xl font-serif font-black text-burgundy mt-2 mb-5">
             Why Manual-First Matters
           </h2>
-          <p className="font-serif italic text-lg sm:text-2xl text-[#100C0B] leading-relaxed max-w-3xl mx-auto font-medium">
+          <p className="font-serif italic text-base sm:text-xl lg:text-2xl text-[#100C0B] leading-relaxed max-w-3xl mx-auto font-medium">
             &ldquo;When software automatically connects to bank accounts, users disconnect from the reality of their spending. By recording transactions intentionally, you cultivate true awareness, eliminate privacy liabilities, and regain complete sovereignty over your financial life.&rdquo;
           </p>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm font-serif font-bold text-burgundy">
+          <div className="mt-8 sm:mt-10 flex flex-wrap justify-center gap-6 sm:gap-8 text-sm font-serif font-bold text-burgundy">
             <span className="flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-income" /> Secure &amp; Private
             </span>
