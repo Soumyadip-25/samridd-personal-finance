@@ -1,0 +1,8 @@
+# Default owners for all files
+* @Soumyadip-25
+
+# Database and security-sensitive paths require lead review
+/supabase/migrations/ @Soumyadip-25
+/supabase/functions/ @Soumyadip-25
+/src/lib/money.ts @Soumyadip-25
+/src/lib/supabase.ts @Soumyadip-25

@@ -1,0 +1,86 @@
+:root {
+  /* Brand Primitive Tokens (architecture.md §A.5) */
+  --brand-burgundy: #722f37;
+  --brand-mocha: #e8dcc6;
+  --brand-latte: #b7a89a;
+
+  /* Semantic Theme Tokens - Light Mode */
+  --background: #fbf9f5;
+  --surface: #ffffff;
+  --surface-raised: #f4efe6;
+  --foreground: #2a201c;
+  --foreground-muted: #6e6259;
+
+  /* Primary Brand (Burgundy on light) */
+  --primary: #722f37;
+  --primary-foreground: #ffffff;
+  --primary-hover: #5a242b;
+
+  /* Secondary & Muted (Derived from Mocha & Latte) */
+  --secondary: #e8dcc6;
+  --secondary-foreground: #42352b;
+  --muted: #f0e8dc;
+  --muted-foreground: #786c63;
+  --accent: #e4d5be;
+  --accent-foreground: #2a201c;
+
+  /* Borders & Dividers (Cosmic Latte at varying opacities) */
+  --border: #dcd0be;
+  --input: #dcd0be;
+  --ring: #722f37;
+
+  /* Semantic Status Colors (Explicitly distinct from Burgundy) */
+  --success: #15803d;
+  --success-foreground: #ffffff;
+  --warning: #b45309;
+  --warning-foreground: #ffffff;
+  --danger: #dc2626;
+  --danger-foreground: #ffffff;
+  --info: #1d4ed8;
+  --info-foreground: #ffffff;
+
+  /* Financial Domain Semantics */
+  --income: #15803d;
+  --expense: #b91c1c;
+
+  /* UI Tokens */
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Semantic Theme Tokens - Dark Mode */
+  --background: #141110;
+  --surface: #1e1917;
+  --surface-raised: #2a2321;
+  --foreground: #f5ede0;
+  --foreground-muted: #b0a396;
+
+  /* Lightened Burgundy tint for dark mode to pass WCAG AA contrast >= 4.5:1 */
+  --primary: #d96b77;
+  --primary-foreground: #141110;
+  --primary-hover: #e4818c;
+
+  --secondary: #2c2522;
+  --secondary-foreground: #f5ede0;
+  --muted: #26201e;
+  --muted-foreground: #9e9185;
+  --accent: #332b27;
+  --accent-foreground: #f5ede0;
+
+  --border: #3b332f;
+  --input: #3b332f;
+  --ring: #d96b77;
+
+  /* Dark mode status colors */
+  --success: #22c55e;
+  --success-foreground: #141110;
+  --warning: #f59e0b;
+  --warning-foreground: #141110;
+  --danger: #ef4444;
+  --danger-foreground: #ffffff;
+  --info: #3b82f6;
+  --info-foreground: #ffffff;
+
+  --income: #22c55e;
+  --expense: #f87171;
+}
