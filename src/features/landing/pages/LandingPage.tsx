@@ -16,7 +16,7 @@ export default function LandingPage() {
   return (
     <div className="relative min-h-[calc(100vh-5rem)] flex flex-col justify-between">
       {/* Hero Section — Logo on Left, Headings on Right, Centered Get Started Button & Bottom Quote */}
-      <section className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-8 pb-16 sm:pt-14 sm:pb-20 w-full flex-1 flex flex-col justify-center">
+      <section className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-6 pb-8 sm:pt-10 sm:pb-12 w-full flex-1 flex flex-col justify-center">
         {/* Two-Column Grid: Left = Logo & Plan Track Grow, Right = Headings & Description */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Column: SAMRIDD Logo + PLAN • TRACK • GROW in bold burgundy */}
@@ -69,7 +69,7 @@ export default function LandingPage() {
         </div>
 
         {/* Centrally Aligned Down the Contents: Refined Sleek Get Started Button */}
-        <div className="mt-10 sm:mt-14 flex flex-col items-center justify-center w-full gap-5">
+        <div className="mt-7 sm:mt-9 flex flex-col items-center justify-center w-full gap-4">
           <Link
             to="/signup"
             className="inline-flex items-center gap-2.5 px-8 py-2.5 sm:px-10 sm:py-3 rounded-full bg-burgundy text-[#E8DCC6] font-serif font-bold text-base sm:text-lg shadow-xl hover:bg-burgundy-hover hover:text-[#FAF5EE] hover:shadow-burgundy/30 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 group ring-1 ring-burgundy/30"
@@ -118,11 +118,15 @@ export default function LandingPage() {
           </div>
         </div>
 
-        {/* Bottom Tagline Divider */}
-        <div className="mt-16 sm:mt-24 flex items-center justify-center gap-4 text-burgundy font-serif italic font-semibold text-sm sm:text-base">
-          <span className="w-12 sm:w-28 h-[1.5px] bg-burgundy/50"></span>
-          <span>✦ &mdash; Smarter choices. A more secure tomorrow. &mdash; ✦</span>
-          <span className="w-12 sm:w-28 h-[1.5px] bg-burgundy/50"></span>
+        {/* Bottom Tagline Divider cleanly visible above the minimal waves */}
+        <div className="mt-6 sm:mt-8 flex items-center justify-center gap-3 sm:gap-4 text-burgundy font-serif italic font-semibold text-sm sm:text-base relative z-20">
+          <span className="w-12 sm:w-28 h-[1.5px] bg-burgundy/60"></span>
+          <span className="flex items-center gap-2">
+            <span className="text-xs">✦</span>
+            <span>Smarter choices. A more secure tomorrow.</span>
+            <span className="text-xs">✦</span>
+          </span>
+          <span className="w-12 sm:w-28 h-[1.5px] bg-burgundy/60"></span>
         </div>
       </section>
 

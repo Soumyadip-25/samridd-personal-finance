@@ -60,17 +60,19 @@ export function SamriddLogo({ size = 'lg', className = '', align = 'center' }: S
                 </linearGradient>
               </defs>
 
-              {/* 1. Soft Mocha Disc Fill */}
-              <circle cx="200" cy="200" r="162" fill="url(#mocha-disc-glow)" />
+              {/* 1. Soft 3/4 Moon Mocha Fill (Fades out gently at the bottom) */}
+              <path
+                d="M 85.5 314.5 A 162 162 0 1 1 314.5 314.5 C 270 270, 130 270, 85.5 314.5 Z"
+                fill="url(#mocha-disc-glow)"
+              />
 
-              {/* 2. Delicate Golden-Mocha Ring */}
-              <circle
-                cx="200"
-                cy="200"
-                r="162"
+              {/* 2. Delicate 3/4 Moon Golden-Mocha Arc (270° sweep, open at bottom) */}
+              <path
+                d="M 85.5 314.5 A 162 162 0 1 1 314.5 314.5"
                 fill="none"
                 stroke="url(#mocha-ring-gradient)"
                 strokeWidth="2.5"
+                strokeLinecap="round"
               />
 
               {/* 3. Star Flare at (314.5, 85.5) on the circle arc (approx 45° angle) */}
