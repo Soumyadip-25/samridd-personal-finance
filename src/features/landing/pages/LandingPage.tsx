@@ -9,7 +9,7 @@ import {
   Tags,
   BarChart3,
   CheckCircle2,
-  Lock,
+  ShieldCheck,
 } from 'lucide-react';
 
 export default function LandingPage() {
@@ -61,30 +61,61 @@ export default function LandingPage() {
               {/* Quote Line on the right side of the writing */}
               <div className="flex justify-end mt-3">
                 <p className="text-xl sm:text-2xl lg:text-[1.75rem] font-serif italic text-burgundy font-bold tracking-wide text-right">
-                  ~ all in one place ~
+                  ~ all in one place
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Centrally Aligned Down the Contents: Glamorous Get Started Button */}
-        <div className="mt-12 sm:mt-16 flex flex-col items-center justify-center w-full gap-3">
+        {/* Centrally Aligned Down the Contents: Refined Sleek Get Started Button */}
+        <div className="mt-10 sm:mt-14 flex flex-col items-center justify-center w-full gap-5">
           <Link
             to="/signup"
-            className="inline-flex items-center gap-3 px-10 py-4 sm:px-12 sm:py-4.5 rounded-full bg-burgundy text-[#E8DCC6] font-serif font-bold text-lg sm:text-xl shadow-2xl hover:bg-burgundy-hover hover:text-[#FAF5EE] hover:shadow-burgundy/40 transition-all duration-300 hover:-translate-y-1 active:translate-y-0 group ring-2 ring-burgundy/40"
+            className="inline-flex items-center gap-2.5 px-8 py-2.5 sm:px-10 sm:py-3 rounded-full bg-burgundy text-[#E8DCC6] font-serif font-bold text-base sm:text-lg shadow-xl hover:bg-burgundy-hover hover:text-[#FAF5EE] hover:shadow-burgundy/30 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 group ring-1 ring-burgundy/30"
           >
             <span>Get Started</span>
-            <span className="text-2xl leading-none transition-transform group-hover:translate-x-1.5">&rarr;</span>
+            <span className="text-xl leading-none transition-transform group-hover:translate-x-1">&rarr;</span>
           </Link>
-          <span className="text-xs sm:text-sm font-serif text-espresso-muted/90 flex flex-wrap items-center justify-center gap-2">
-            <Lock className="w-3.5 h-3.5 text-income shrink-0" />
-            <span>Secure &amp; Private</span>
-            <span>&bull;</span>
-            <span>Multiple Profiles</span>
-            <span>&bull;</span>
-            <span>Insightful Reports</span>
-          </span>
+
+          {/* Three Feature Badges matching user reference (media_1795377857927_81768710.png) */}
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 lg:gap-8 pt-2">
+            {/* 1. Secure & Private */}
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
+                <ShieldCheck className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
+              </div>
+              <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
+                Secure &amp; Private
+              </span>
+            </div>
+
+            {/* Divider */}
+            <div className="hidden sm:block h-6 w-[1.5px] bg-[#B7A89A]/60" />
+
+            {/* 2. Multiple Profiles */}
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
+                <Layers className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
+              </div>
+              <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
+                Multiple Profiles
+              </span>
+            </div>
+
+            {/* Divider */}
+            <div className="hidden sm:block h-6 w-[1.5px] bg-[#B7A89A]/60" />
+
+            {/* 3. Insightful Reports */}
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-[#E8DCC6]/60 border border-[#B7A89A]/40 flex items-center justify-center shadow-xs shrink-0">
+                <BarChart3 className="w-5 h-5 sm:w-5.5 sm:h-5.5 text-burgundy" />
+              </div>
+              <span className="font-serif font-bold text-base sm:text-lg text-[#100C0B] tracking-wide whitespace-nowrap">
+                Insightful Reports
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Bottom Tagline Divider */}

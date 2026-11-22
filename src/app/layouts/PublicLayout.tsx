@@ -41,11 +41,11 @@ export function PublicLayout() {
             </a>
           </nav>
 
-          {/* Right Action: Sign In pill button in Deep Burgundy (#722F37) with Mocha Cream (#E8DCC6) text (Zero Moon/Theme Toggle) */}
+          {/* Right Action: Sleek Sign In pill button in Deep Burgundy (#722F37) with Mocha Cream (#E8DCC6) text */}
           <div className="flex items-center gap-4 ml-auto">
             <Link
               to="/login"
-              className="px-8 py-2.5 rounded-full bg-burgundy text-[#E8DCC6] font-serif font-bold text-base hover:bg-burgundy-hover hover:text-[#FAF5EE] shadow-lg hover:shadow-xl transition-all duration-200"
+              className="px-6 py-1.5 sm:px-7 sm:py-2 rounded-full bg-burgundy text-[#E8DCC6] font-serif font-bold text-sm sm:text-base hover:bg-burgundy-hover hover:text-[#FAF5EE] shadow-md hover:shadow-lg transition-all duration-200"
             >
               Sign In
             </Link>

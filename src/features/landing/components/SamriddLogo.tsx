@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import burgundyLogo from '@/assets/logo.png';
 
 interface SamriddLogoProps {
   size?: 'sm' | 'md' | 'lg';
@@ -7,78 +8,106 @@ interface SamriddLogoProps {
 }
 
 export function SamriddLogo({ size = 'lg', className = '', align = 'center' }: SamriddLogoProps) {
-  const [imageError, setImageError] = useState(false);
   const isLarge = size === 'lg';
   const isSmall = size === 'sm';
   const isCenter = align === 'center';
 
   return (
     <div className={`flex flex-col ${isCenter ? 'items-center text-center' : 'items-start text-left'} ${className}`}>
-      {/* Subtle Golden-Burgundy Halo for High Glamour */}
-      <div className="relative group">
-        <div className="absolute inset-0 rounded-full bg-radial from-burgundy/20 via-burgundy/5 to-transparent blur-2xl scale-125 pointer-events-none" />
+      {/* Logo Container with Elegance Circle & Golden Star Flare */}
+      <div className="relative group flex items-center justify-center">
+        {isLarge && (
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[52%] w-[290px] h-[290px] sm:w-[370px] sm:h-[370px] lg:w-[420px] lg:h-[420px] pointer-events-none select-none z-0">
+            <svg
+              className="w-full h-full overflow-visible"
+              viewBox="0 0 400 400"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <defs>
+                {/* Soft Mocha Disc Interior Fill */}
+                <radialGradient id="mocha-disc-glow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#E8DCC6" stopOpacity="0.55" />
+                  <stop offset="60%" stopColor="#E8DCC6" stopOpacity="0.25" />
+                  <stop offset="85%" stopColor="#B7A89A" stopOpacity="0.12" />
+                  <stop offset="100%" stopColor="#B7A89A" stopOpacity="0" />
+                </radialGradient>
 
-        {!imageError ? (
-          <img
-            src="/logo.png"
-            alt="SAMRIDD"
-            onError={() => setImageError(true)}
-            className={`${
-              isLarge
-                ? 'h-36 sm:h-48'
-                : isSmall
-                ? 'h-10'
-                : 'h-20 sm:h-28'
-            } w-auto object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-[1.02]`}
-          />
-        ) : (
-          /* Vector Lotus & SAMRIDD Fallback */
-          <div className={`flex flex-col ${isCenter ? 'items-center' : 'items-start'}`}>
-            <div className="mb-2">
-              <svg
-                className={`${isLarge ? 'w-28 h-24 sm:w-32 sm:h-28' : isSmall ? 'w-9 h-8' : 'w-16 h-14'} text-burgundy drop-shadow-sm`}
-                viewBox="0 0 120 100"
+                {/* Delicate Mocha-Gold Embossed Ring */}
+                <linearGradient id="mocha-ring-gradient" x1="15%" y1="90%" x2="85%" y2="10%">
+                  <stop offset="0%" stopColor="#B7A89A" stopOpacity="0.35" />
+                  <stop offset="35%" stopColor="#E8DCC6" stopOpacity="0.65" />
+                  <stop offset="70%" stopColor="#F5EDE0" stopOpacity="0.9" />
+                  <stop offset="82%" stopColor="#FFF9EE" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#B7A89A" stopOpacity="0.45" />
+                </linearGradient>
+
+                {/* Star Ambient Corona Glow */}
+                <radialGradient id="star-ambient-glow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#FFFDF7" stopOpacity="0.95" />
+                  <stop offset="30%" stopColor="#E8DCC6" stopOpacity="0.75" />
+                  <stop offset="60%" stopColor="#B7A89A" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="#B7A89A" stopOpacity="0" />
+                </radialGradient>
+
+                {/* Star Metallic Gold-Mocha Facets */}
+                <linearGradient id="star-gold-facet" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#FFFFFF" />
+                  <stop offset="25%" stopColor="#FFF4E0" />
+                  <stop offset="65%" stopColor="#E8DCC6" />
+                  <stop offset="100%" stopColor="#B7A89A" />
+                </linearGradient>
+              </defs>
+
+              {/* 1. Soft Mocha Disc Fill */}
+              <circle cx="200" cy="200" r="162" fill="url(#mocha-disc-glow)" />
+
+              {/* 2. Delicate Golden-Mocha Ring */}
+              <circle
+                cx="200"
+                cy="200"
+                r="162"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M60 8 C60 8, 48 28, 48 50 C48 70, 60 76, 60 76 C60 76, 72 70, 72 50 C72 28, 60 8, 60 8 Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M54 22 C54 22, 35 34, 33 54 C31 68, 44 76, 52 77 C52 77, 43 65, 45 52 C47 38, 54 22, 54 22 Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M66 22 C66 22, 85 34, 87 54 C89 68, 76 76, 68 77 C68 77, 77 65, 75 52 C73 38, 66 22, 66 22 Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M48 42 C48 42, 22 50, 17 66 C13 78, 27 82, 39 80 C39 80, 26 73, 29 64 C32 54, 48 42, 48 42 Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M72 42 C72 42, 98 50, 103 66 C107 78, 93 82, 81 80 C81 80, 94 73, 91 64 C88 54, 72 42, 72 42 Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M28 82 C44 87, 76 87, 92 82 C82 85, 38 85, 28 82 Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
+                stroke="url(#mocha-ring-gradient)"
+                strokeWidth="2.5"
+              />
 
-            <div className={`font-cinzel font-black tracking-[0.16em] text-burgundy ${
-              isLarge ? 'text-4xl sm:text-5xl lg:text-6xl' : isSmall ? 'text-lg tracking-wider' : 'text-2xl sm:text-3xl'
-            }`}>
-              SAMRIDD
-            </div>
+              {/* 3. Star Flare at (314.5, 85.5) on the circle arc (approx 45° angle) */}
+              <g transform="translate(314.5, 85.5)">
+                {/* Soft Star Corona Glow */}
+                <circle cx="0" cy="0" r="38" fill="url(#star-ambient-glow)" />
+                <circle cx="0" cy="0" r="18" fill="url(#star-ambient-glow)" opacity="0.8" />
+
+                {/* 4-Pointed Star Flare with Concave Tapered Arms */}
+                <path
+                  d="M 0 -24 C 0.8 -4.5, 4.5 -0.8, 19 0 C 4.5 0.8, 0.8 4.5, 0 24 C -0.8 4.5, -4.5 0.8, -19 0 C -4.5 -0.8, -0.8 -4.5, 0 -24 Z"
+                  fill="url(#star-gold-facet)"
+                  style={{ filter: 'drop-shadow(0 0 5px rgba(232, 220, 198, 0.85))' }}
+                />
+
+                {/* Central White Sparkle Core */}
+                <circle cx="0" cy="0" r="2.5" fill="#FFFFFF" />
+              </g>
+            </svg>
           </div>
         )}
+
+        <img
+          src={burgundyLogo}
+          alt="SAMRIDD — Lotus Logo"
+          className={`${
+            isLarge
+              ? 'h-36 sm:h-48'
+              : isSmall
+              ? 'h-10'
+              : 'h-20 sm:h-28'
+          } w-auto object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-[1.02] relative z-10`}
+        />
       </div>
 
       {/* Tagline: ✦ PLAN • TRACK • GROW ✦ in Bold Dark Burgundy */}
-      <div className={`flex items-center gap-3 font-cinzel font-bold tracking-[0.28em] text-burgundy uppercase mt-4 ${
+      <div className={`flex items-center gap-3 font-cinzel font-bold tracking-[0.28em] text-burgundy uppercase mt-4 relative z-10 ${
         isLarge ? 'text-xs sm:text-sm' : isSmall ? 'text-[9px] tracking-widest' : 'text-[11px]'
       }`}>
         <span className="w-8 sm:w-12 h-[2px] bg-burgundy"></span>
@@ -88,7 +117,7 @@ export function SamriddLogo({ size = 'lg', className = '', align = 'center' }: S
 
       {/* Luxury Credential */}
       {isLarge && (
-        <div className="mt-3 text-[11px] font-cinzel tracking-[0.22em] text-espresso-muted uppercase font-bold">
+        <div className="mt-3 text-[11px] font-cinzel tracking-[0.22em] text-espresso-muted uppercase font-bold relative z-10">
           ✦ Sovereign Indian Personal Finance ✦
         </div>
       )}
