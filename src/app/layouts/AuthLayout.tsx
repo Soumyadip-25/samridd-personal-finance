@@ -30,11 +30,9 @@ export function AuthLayout() {
 
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <Link to="/" className="inline-flex items-center gap-2 font-bold text-2xl text-[var(--primary)]">
-            <div className="w-10 h-10 rounded-xl bg-[var(--primary)] text-white flex items-center justify-center font-extrabold text-xl shadow-md">
-              S
-            </div>
-            <span>SAMRIDD</span>
+          <Link to="/" className="inline-flex items-center gap-2.5 font-bold text-2xl text-burgundy">
+            <img src="/logo.png" alt="SAMRIDD" className="h-10 w-auto object-contain rounded-lg shadow-xs" />
+            <span className="font-extrabold tracking-tight">SAMRIDD</span>
           </Link>
         </div>
 

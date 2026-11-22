@@ -27,6 +27,9 @@
 
   --color-income: #15803d;
   --color-expense: #b91c1c;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-cinzel: 'Cinzel', Georgia, serif;
 }
 
 :root {
@@ -114,6 +117,9 @@
 .text-foreground { color: var(--foreground) !important; }
 .text-foreground-muted { color: var(--foreground-muted) !important; }
 .border-border { border-color: var(--border) !important; }
+
+.font-serif { font-family: 'Playfair Display', Georgia, Cambria, serif !important; }
+.font-cinzel { font-family: 'Cinzel', Georgia, Cambria, serif !important; }
 
 @layer base {
   * {

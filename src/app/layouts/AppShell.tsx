@@ -43,9 +43,7 @@ export function AppShell() {
         {/* Brand & Profile Selector */}
         <div className="p-4 border-b border-latte">
           <div className="flex items-center gap-2.5 mb-4">
-            <div className="w-9 h-9 rounded-xl bg-burgundy text-white flex items-center justify-center font-black text-lg shadow-md ring-2 ring-latte/40">
-              S
-            </div>
+            <img src="/logo.png" alt="SAMRIDD" className="h-9 w-auto object-contain rounded-lg shadow-xs" />
             <div>
               <span className="font-extrabold text-xl tracking-tight text-burgundy">SAMRIDD</span>
               <span className="block text-[10px] text-latte-dark font-medium -mt-1 tracking-wider uppercase">Personal Finance</span>
@@ -121,9 +119,7 @@ export function AppShell() {
         {/* Mobile Top Header */}
         <header className="md:hidden flex items-center justify-between p-4 border-b border-latte bg-mocha-surface">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-burgundy text-white flex items-center justify-center font-bold text-sm shadow-sm">
-              S
-            </div>
+            <img src="/logo.png" alt="SAMRIDD" className="h-8 w-auto object-contain rounded-md shadow-xs" />
             <span className="font-extrabold text-lg text-burgundy">SAMRIDD</span>
           </div>
 
